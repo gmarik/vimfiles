@@ -80,6 +80,6 @@ set splitright
 colorscheme gmarik
 " "}}}
 
-source ~/.vim/plugins.vim
-source ~/.vim/keymap.vim
-source ~/.vim/autocmd.vim
+source ~/.vim/rc.d/plugins.vim
+source ~/.vim/rc.d/keymap.vim
+source ~/.vim/rc.d/autocmd.vim
