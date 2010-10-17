@@ -4,33 +4,44 @@
 # from: http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
 
 git_bundles = [ 
-  "git://github.com/gmarik/snipmate.vim.git",
   "git://github.com/vim-scripts/pathogen.vim.git",
-  "git://github.com/vim-scripts/ack.vim.git",
-  "git://github.com/vim-scripts/cucumber.zip.git",
 
-  "git://github.com/vim-scripts/fugitive.vim.git",
-  "git://github.com/vim-scripts/git.zip.git",
-
-  "git://github.com/vim-scripts/Markdown.git",
-  "git://github.com/vim-scripts/ragtag.vim.git",
-
-  "git://github.com/vim-scripts/jQuery.git",
-  "git://github.com/vim-scripts/rails.vim.git",
-  "git://github.com/vim-scripts/repeat.vim.git",
-
-  "git://github.com/vim-scripts/surround.vim.git",
-  "git://github.com/vim-scripts/vividchalk.vim.git",
-  "git://github.com/vim-scripts/Align.git",
-  "git://github.com/vim-scripts/SuperTab.git",
-  "git://github.com/vim-scripts/tComment.git",
+  # Navigation
   "git://github.com/vim-scripts/L9",
   "git://github.com/vim-scripts/FuzzyFinder",
   "git://git.wincent.com/command-t.git",
+  
+  # Ack search
+  "git://github.com/vim-scripts/ack.vim.git",
+
+  # Programming
+  "git://github.com/vim-scripts/jQuery.git",
+  "git://github.com/vim-scripts/rails.vim.git",
+
+  # Snippets
+  "git://github.com/gmarik/snipmate.vim.git",
+
+
+  # Syntax highlight
+  "git://github.com/vim-scripts/cucumber.zip.git",
+  "git://github.com/vim-scripts/Markdown.git",
+
+  # Git integration
+  "git://github.com/vim-scripts/git.zip.git",
+  "git://github.com/vim-scripts/fugitive.vim.git",
+
+  # (HT|X)ml tool
+  "git://github.com/vim-scripts/ragtag.vim.git",
+
+  # Utility
+  "git://github.com/vim-scripts/repeat.vim.git",
+  "git://github.com/vim-scripts/surround.vim.git",
+  "git://github.com/vim-scripts/tComment.git",
   "git://github.com/vim-scripts/ZoomWin.git",
-  "git://github.com/vim-scripts/Gist.vim",
+  "git://github.com/vim-scripts/SuperTab.git",
   "git://github.com/vim-scripts/file-line.git",
   "git://github.com/vim-scripts/IndexedSearch",
+  "git://github.com/vim-scripts/Align.git",
 ]
 
 
