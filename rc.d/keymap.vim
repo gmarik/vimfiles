@@ -10,8 +10,6 @@ vnoremap <silent> <LocalLeader>= yP
 nnoremap <silent> <LocalLeader>= YP
 " Buffers
 nnoremap <silent> <LocalLeader>- :bd<CR>
-"Selection searc 
-vnoremap / y/<C-R>"<CR>N
 " Split line(opposite to S-J joining line) 
 nnoremap <silent> <C-J> gEa<CR><ESC>ew 
 
@@ -60,3 +58,8 @@ noremap <C-W>+o :ZoomWin<CR>
 " Ack
 noremap <LocalLeader># "ayiw:Ack <C-r>a<CR>
 vnoremap <LocalLeader># "ay:Ack <C-r>a<CR>
+
+" tComment
+nnoremap // :TComment<CR>
+vnoremap // :TComment<CR>
+"
