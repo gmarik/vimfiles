@@ -13,6 +13,7 @@ git_bundles = [
   
   # Ack search
   "git://github.com/vim-scripts/ack.vim.git",
+  "git://github.com/gmarik/vim-visual-star-search.git",
 
   # Programming
   "git://github.com/vim-scripts/jQuery.git",
@@ -20,7 +21,6 @@ git_bundles = [
 
   # Snippets
   "git://github.com/gmarik/snipmate.vim.git",
-
 
   # Syntax highlight
   "git://github.com/vim-scripts/cucumber.zip.git",
