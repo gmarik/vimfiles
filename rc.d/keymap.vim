@@ -1,6 +1,7 @@
 nnoremap <silent> <LocalLeader>rs :source ~/.vimrc<CR>
-nnoremap <silent> <LocalLeader>re :e ~/.vimrc<CR>
-nnoremap <silent> <LocalLeader>rt :tabnew ~/.vimrc<CR>
+nnoremap <silent> <LocalLeader>rt :tabnew ~/.vim/vimrc<CR>
+snoremap <silent> <LocalLeader>re :e ~/.vim/vimrc<CR>
+nnoremap <silent> <LocalLeader>rd :e ~/.vim/ <CR>
 
 " Tabs 
 nnoremap <silent> <LocalLeader>[ :tabprev<CR>
