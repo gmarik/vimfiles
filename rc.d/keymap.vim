@@ -14,7 +14,7 @@ nnoremap <silent> <LocalLeader>- :bd<CR>
 nnoremap <silent> <C-J> gEa<CR><ESC>ew 
 
 nnoremap # :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
-nmap * "ayiw/<C-r>a<CR>
+nnoremap * #
 
 map <S-CR> A<CR><ESC>
 "
