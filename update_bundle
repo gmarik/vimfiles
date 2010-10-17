@@ -40,7 +40,6 @@ git_bundles = [
   "git://github.com/vim-scripts/ZoomWin.git",
   "git://github.com/vim-scripts/SuperTab.git",
   "git://github.com/vim-scripts/file-line.git",
-  "git://github.com/vim-scripts/IndexedSearch",
   "git://github.com/vim-scripts/Align.git",
 ]
 
