@@ -4,7 +4,7 @@ so ~/.vim/plugin/vundle.vim
 " Navigation
 Bundle "http://github.com/vim-scripts/L9.git"
 Bundle "http://github.com/vim-scripts/FuzzyFinder.git"
-Bundle "http://git.wincent.com/command-t.git"
+Bundle "git://git.wincent.com/command-t.git"
   
 " Ack search
 Bundle "http://github.com/vim-scripts/ack.vim.git"
