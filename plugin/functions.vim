@@ -15,4 +15,11 @@ func! g:sqlformat()
   silent! %s/ \(from\|where\|join\|order\|group\) / \r\t\t \1 /g
 endf
 
+func! g:commandTInstall()
+  exec ':ruby 
+        \ puts plugin_path = File.expand_path($LOAD_PATH.grep(/command-?t/i).first)
+        \ system(cd #{plugin_path}/command-t/ && git checkout 0.8.1 && ruby extconf.rb && make)
+        \'
+endf
+
 " vim: ft=vim
