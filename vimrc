@@ -82,7 +82,8 @@ colorscheme gmarik
 
 
 " Plugins " {{{
-source ~/.vim/bundlerc "
+call vundle#rc()
+
 " Command-T
 let g:CommandTMatchWindowAtTop=1 " show window at top
 " " }}}
