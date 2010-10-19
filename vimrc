@@ -91,7 +91,7 @@ let g:CommandTMatchWindowAtTop=1 " show window at top
 
 " Command and Auto commands " {{{
 " Sudo write
-comm! W exec 'w !sudo tee % > /dev/null' | e! %
+comm! W exec 'w !sudo tee % > /dev/null' | e!
 
 "Auto commands
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby
