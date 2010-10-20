@@ -87,8 +87,13 @@ call vundle#rc()
 " Command-T
 let g:CommandTMatchWindowAtTop=1 " show window at top
 " " }}}
+"
 
-" Auto commands " {{{
+" Command and Auto commands " {{{
+" Sudo write
+comm! W exec 'w !sudo tee % > /dev/null' | e! %
+
+"Auto commands
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
 au BufRead,BufNewFile {COMMIT_EDITMSG}                                set ft=gitcommit
@@ -129,9 +134,6 @@ map <silent> <F12> :set invlist<CR>
 "
 " generate HTML version current buffer using current color scheme
 map <silent> <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
-
-" TODO: http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
-cmap w!! %!sudo tee > /dev/null % 
 
 " Plugins
 "FuzzyFinder
