@@ -80,14 +80,12 @@ set splitright
 colorscheme gmarik
 " "}}}
 
-
 " Plugins " {{{
 call vundle#rc()
 
 " Command-T
 let g:CommandTMatchWindowAtTop=1 " show window at top
 " " }}}
-"
 
 " Command and Auto commands " {{{
 " Sudo write
