@@ -30,4 +30,10 @@ map      <D-7> 7gt
 map      <D-8> 8gt
 map      <D-9> 9gt
 
+" Copy
+nnoremap <D-c> yy
+" Duplication
+vnoremap <silent> <D-d> yP
+nnoremap <silent> <D-d> YP
+
 endif
