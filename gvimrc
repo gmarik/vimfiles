@@ -1,13 +1,16 @@
-
-set guioptions=cMg " do not show menu and toolbar
-set fuoptions=maxvert,maxhorz
+set guioptions=cMg " console dialogs, do not show menu and toolbar
 set mouse=a "enable mouse in GUI mode
 
 colorscheme vibrantink2
 
-set guifont=Terminus:h16
+if !has('mac')
+  set guifont=Terminus:h16
+end
 
 if has('mac')
+set fullscreen
+set fuoptions=maxvert,maxhorz ",background:#00AAaaaa
+
 set guifont=Andale\ Mono:h13
 set noantialias
 
