@@ -30,6 +30,17 @@ map      <D-7> 7gt
 map      <D-8> 8gt
 map      <D-9> 9gt
 
+" see $VIMRUNTIME/menu.vim for more 
+amenu &File.&Save<Tab><D-s> <D-s>
+
+" see $VIMRUNTIME/macmap.vim  for more
+" save file only when changed
+nnoremap <silent> <special> <D-s> :if expand("%") == ""<Bar>browse confirm update<Bar> else<Bar>confirm update<Bar>endif<CR>
+vmap <special> <D-s> <Esc><D-s>gv
+imap <special> <D-s> <C-O><D-s>
+cmap <special> <D-s> <C-C><D-s>
+omap <special> <D-s> <Esc><D-s>
+
 " Copy
 nnoremap <D-c> yy
 " Duplication
