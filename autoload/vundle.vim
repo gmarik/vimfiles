@@ -3,8 +3,8 @@
 " Version:      0.1
 " Readme:       http://github.com/gmarik/vundle/blob/master/README.md
 
-if exists("g:vundle_loaded") || &cp | finish | endif
-let g:vundle_loaded = 1
+" if exists("g:vundle_loaded") || &cp | finish | endif
+" let g:vundle_loaded = 1
 
 au BufRead,BufNewFile {bundlerc} set ft=vim
 
@@ -18,9 +18,10 @@ let g:bundles = []
 let g:bundle_uris = {}
 
 func! vundle#add_bundle(...)
-  let bundle = split(a:1,'\/')[-1]
-  call add(g:bundles, bundle)
-  let g:bundle_uris[bundle] = a:1
+  let name = split(a:1,'\/')[-1] " potentially break on Windows
+  let opts = { 'uri': a:1, 'name' : name , 'path': s:BundlePath(name)}
+  " if type(a:2) == type({}) | extend(opts, a:2) | endif
+  call add(g:bundles, opts)
 endf
 
 func! vundle#rc(...)
@@ -46,20 +47,18 @@ endf
 func! vundle#sync_bundles()
   execute '!mkdir -p '.g:bundle_dir
   for bundle in g:bundles
-    let bundle_path = s:BundlePath(bundle)
-    let bundle_uri = g:bundle_uris[bundle]
-    let git_dir = bundle_path.'/.git'
+    let git_dir = bundle.path.'/.git'
     let cmd = isdirectory(git_dir) ?  
           \ '--git-dir='.git_dir.' pull' : 
-          \ 'clone '.bundle_uri.' '.bundle_path
-    exec '!echo -ne "* '.bundle.'"'
+          \ 'clone '.bundle.uri.' '.bundle.path
+    exec '!echo -ne "* '.bundle.name.'"'
     exec '!git '.cmd
   endfor
 endf
 
 func! vundle#helptagify_bundles()
   for bundle in g:bundles
-    let dir = s:BundlePath(bundle)
+    let dir = bundle.path
     if isdirectory(dir.'/doc') && (!filereadable(dir.'/doc/tags') || filewritable(dir.'/doc/tags'))
       helptags `=dir.'/doc'`
     endif
@@ -70,10 +69,9 @@ func! s:BundlePath(bundle_name)
   return expand(g:bundle_dir.a:bundle_name)
 endf
 
-func! s:BundleRuntime(bundle_name) " {{{1
-  let bundle_path = s:BundlePath(a:bundle_name)
-  let before = [bundle_path] | let after  = []
-  let after_dir = expand(bundle_path.'/'.'after')
+func! s:BundleRuntime(bundle) 
+  let before = [a:bundle.path] | let after  = []
+  let after_dir = expand(a:bundle.path.'/'.'after')
   if isdirectory(after_dir) | let after = [after_dir] | endif
   return [before, after]
-endf " }}}
+endf 
