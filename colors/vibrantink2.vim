@@ -1,22 +1,12 @@
 " Vim color scheme
 "
-" Name:         vibrantink.vim
-" Maintainer:   Jo Vermeulen <jo.vermeulen@gmail.com>
-" Last Change:  30 Jul 2007
+" Name:         vibrantink2.vim
+" Maintainer:   http://github.com/gmarik
+" Last Change:  2010-10-26
 " License:      public domain
-" Version:      1.2
+" Version:      0.2
 "
-" This scheme should work in the GUI and in xterm's 256 color mode. It won't
-" work in 8/16 color terminals.
-"
-" I based it on John Lam's initial VibrantInk port to Vim [1]. Thanks to a
-" great tutorial [2], I was able to convert it to xterm 256 color mode. And
-" of course, credits go to Justin Palmer for creating the original VibrantInk
-" TextMate color scheme [3].
-"
-" [1] http://www.iunknown.com/articles/2006/09/04/vim-can-save-your-hands-too
-" [2] http://frexx.de/xterm-256-notes/
-" [3] http://encytemedia.com/blog/articles/2006/01/03/textmate-vibrant-ink-theme-and-prototype-bundle
+" I based it on Jo Vermeulen vibrantink.vim"
 
 set background=dark
 hi clear
@@ -26,12 +16,15 @@ endif
 
 let g:colors_name = "vibrantink2"
 
+hi MergeConflict guibg=red
+match MergeConflict /[><]\{7\} /
+
 if has("gui_running")
     highlight Normal guifg=White   guibg=Black
     highlight Cursor guifg=Black   guibg=Green
     highlight Keyword guifg=#FF6600
     highlight Define guifg=#FF6600
-    highlight Comment guifg=#9933CC
+    highlight Comment guifg=Gray
     highlight Identifier guifg=cyan gui=NONE
     highlight rubySymbol guifg=#339999 gui=NONE
     highlight rubyStringDelimiter guifg=#33FF33
