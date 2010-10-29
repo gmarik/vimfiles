@@ -33,3 +33,5 @@ Bundle "http://github.com/vim-scripts/ZoomWin.git"
 Bundle "http://github.com/vim-scripts/SuperTab.git"
 Bundle "http://github.com/vim-scripts/file-line.git"
 Bundle "http://github.com/vim-scripts/Align.git"
+
+Bundle "http://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
