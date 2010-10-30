@@ -81,6 +81,7 @@ colorscheme gmarik
 " "}}}
 
 " Plugins " {{{
+so ~/.vim/vundle.git/autoload/vundle.vim
 call vundle#rc()
 
 " Command-T
