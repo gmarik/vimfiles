@@ -15,7 +15,6 @@ com! -nargs=0 BundleInstall call vundle#install_bundles()
 
 let g:bundle_dir = expand('~/.vim/bundle/')
 let g:bundles = []
-let g:bundle_uris = {}
 
 func! vundle#add_bundle(...)
   let bundle = { 'uri': a:1 }
