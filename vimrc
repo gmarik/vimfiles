@@ -135,6 +135,7 @@ so ~/.vim/vundle.git/autoload/vundle.vim " my dev version
 call vundle#rc()
 
 " trying this 
+Bundle "http://github.com/mattn/gist-vim.git"
 Bundle "http://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
 
 " Programming
