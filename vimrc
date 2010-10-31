@@ -2,7 +2,6 @@
 
 " General "{{{
 set nocompatible  " disable vi compatibility.
-set runtimepath+=~/.vim " For our local plugins and files
 set history=256  " Number of things to remember in history.
 set autowrite  " Writes on make/shell commands
 set autoread  
