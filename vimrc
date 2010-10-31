@@ -81,13 +81,6 @@ set splitright
 colorscheme gmarik
 " "}}}
 
-" Plugins " {{{
-so ~/.vim/vundle.git/autoload/vundle.vim
-call vundle#rc()
-
-" Command-T
-let g:CommandTMatchWindowAtTop=1 " show window at top
-" " }}}
 
 " Command and Auto commands " {{{
 " Sudo write
@@ -134,10 +127,45 @@ map <silent> <F12> :set invlist<CR>
 "
 " generate HTML version current buffer using current color scheme
 map <silent> <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
+" " }}}
 
-" Plugins
-"FuzzyFinder
-let g:fuf_modesDisable = []
+so ~/.vim/vundle.git/autoload/vundle.vim " my dev version
+
+" Plugins " {{{
+call vundle#rc()
+
+" trying this 
+Bundle "http://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
+
+" Programming
+Bundle "http://github.com/vim-scripts/jQuery.git"
+Bundle "http://github.com/vim-scripts/rails.vim.git"
+
+" Snippets
+Bundle "http://github.com/gmarik/snipmate.vim.git"
+
+" Syntax highlight
+Bundle "http://github.com/vim-scripts/cucumber.zip.git"
+Bundle "http://github.com/vim-scripts/Markdown.git"
+
+" Git integration
+Bundle "http://github.com/vim-scripts/git.zip.git"
+Bundle "http://github.com/vim-scripts/fugitive.vim.git"
+
+" (HT|X)ml tool
+Bundle "http://github.com/vim-scripts/ragtag.vim.git"
+
+" Utility
+Bundle "http://github.com/vim-scripts/repeat.vim.git"
+Bundle "http://github.com/vim-scripts/surround.vim.git"
+Bundle "http://github.com/vim-scripts/SuperTab.git"
+Bundle "http://github.com/vim-scripts/file-line.git"
+Bundle "http://github.com/vim-scripts/Align.git"
+
+" FuzzyFinder
+Bundle "http://github.com/vim-scripts/L9.git"
+Bundle "http://github.com/vim-scripts/FuzzyFinder.git"
+let g:fuf_modesDisable = [] " {{{
 nnoremap <silent> <LocalLeader>h :FufHelp<CR>
 nnoremap <silent> <LocalLeader>2  :FufFileWithCurrentBufferDir<CR>
 nnoremap <silent> <LocalLeader>@  :FufFile<CR>
@@ -150,18 +178,30 @@ nnoremap <silent> <LocalLeader>7  :FufLine<CR>
 nnoremap <silent> <LocalLeader>8  :FufBookmark<CR> 
 nnoremap <silent> <LocalLeader>*  :FuzzyFinderAddBookmark<CR><CR>
 nnoremap <silent> <LocalLeader>9  :FufTaggedFile<CR> 
+" " }}}
 
 " Zoomwin
+Bundle "http://github.com/vim-scripts/ZoomWin.git"
 noremap <LocalLeader>o :ZoomWin<CR>
 vnoremap <LocalLeader>o <C-C>:ZoomWin<CR>
 inoremap <LocalLeader>o <C-O>:ZoomWin<CR>
 noremap <C-W>+o :ZoomWin<CR>
 
 " Ack
+Bundle "http://github.com/vim-scripts/ack.vim.git"
 noremap <LocalLeader># "ayiw:Ack <C-r>a<CR>
 vnoremap <LocalLeader># "ay:Ack <C-r>a<CR>
 
 " tComment
+Bundle "http://github.com/vim-scripts/tComment.git"
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
+
+" Command-T
+Bundle "git://git.wincent.com/command-t.git"
+let g:CommandTMatchWindowAtTop=1 " show window at top
+
+" Navigation
+Bundle "http://github.com/gmarik/vim-visual-star-search.git"
+
 " " }}}
