@@ -128,7 +128,7 @@ map <silent> <F12> :set invlist<CR>
 map <silent> <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
 " " }}}
 
-so ~/.vim/vundle.git/autoload/vundle.vim " my dev version
+set runtimepath+=~/.vim/vundle.git/ " my dev version
 
 " Plugins " {{{
 call vundle#rc()
