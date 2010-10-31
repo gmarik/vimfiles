@@ -5,6 +5,7 @@ set nocompatible  " disable vi compatibility.
 set runtimepath+=~/.vim " For our local plugins and files
 set history=256  " Number of things to remember in history.
 set autowrite  " Writes on make/shell commands
+set autoread  
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
 set clipboard+=unnamed  " Yanks go on clipboard instead.
 set pastetoggle=<F10> "  toggle between paste and normal: for 'safer' pasting from keyboard
