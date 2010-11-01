@@ -142,6 +142,7 @@ Bundle "http://github.com/thinca/vim-quickrun.git"
 Bundle "http://github.com/thinca/vim-poslist.git"
 Bundle "http://github.com/mattn/gist-vim.git"
 Bundle "http://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
+Bundle "http://github.com/nelstrom/vim-mac-classic-theme.git"
 
 " Programming
 Bundle "jQuery"
