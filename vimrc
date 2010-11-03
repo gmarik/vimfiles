@@ -137,37 +137,40 @@ set runtimepath+=~/.vim/vundle.git/ " my dev version
 call vundle#rc()
 
 " trying this 
+Bundle "YankRing.vim"
+Bundle "http://github.com/thinca/vim-quickrun.git"
+Bundle "http://github.com/thinca/vim-poslist.git"
 Bundle "http://github.com/mattn/gist-vim.git"
 Bundle "http://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
 
 " Programming
-Bundle "http://github.com/vim-scripts/jQuery.git"
-Bundle "http://github.com/vim-scripts/rails.vim.git"
+Bundle "jQuery"
+Bundle "rails.vim"
 
 " Snippets
 Bundle "http://github.com/gmarik/snipmate.vim.git"
 
 " Syntax highlight
-Bundle "http://github.com/vim-scripts/cucumber.zip.git"
-Bundle "http://github.com/vim-scripts/Markdown.git"
+Bundle "cucumber.zip"
+Bundle "Markdown"
 
 " Git integration
-Bundle "http://github.com/vim-scripts/git.zip.git"
-Bundle "http://github.com/vim-scripts/fugitive.vim.git"
+Bundle "git.zip"
+Bundle "fugitive.vim"
 
 " (HT|X)ml tool
-Bundle "http://github.com/vim-scripts/ragtag.vim.git"
+Bundle "ragtag.vim"
 
 " Utility
-Bundle "http://github.com/vim-scripts/repeat.vim.git"
-Bundle "http://github.com/vim-scripts/surround.vim.git"
-Bundle "http://github.com/vim-scripts/SuperTab.git"
-Bundle "http://github.com/vim-scripts/file-line.git"
-Bundle "http://github.com/vim-scripts/Align.git"
+Bundle "repeat.vim"
+Bundle "surround.vim"
+Bundle "SuperTab"
+Bundle "file-line"
+Bundle "Align"
 
 " FuzzyFinder
-Bundle "http://github.com/vim-scripts/L9.git"
-Bundle "http://github.com/vim-scripts/FuzzyFinder.git"
+Bundle "L9"
+Bundle "FuzzyFinder"
 let g:fuf_modesDisable = [] " {{{
 nnoremap <silent> <LocalLeader>h :FufHelp<CR>
 nnoremap <silent> <LocalLeader>2  :FufFileWithCurrentBufferDir<CR>
@@ -184,19 +187,19 @@ nnoremap <silent> <LocalLeader>9  :FufTaggedFile<CR>
 " " }}}
 
 " Zoomwin
-Bundle "http://github.com/vim-scripts/ZoomWin.git"
+Bundle "ZoomWin"
 noremap <LocalLeader>o :ZoomWin<CR>
 vnoremap <LocalLeader>o <C-C>:ZoomWin<CR>
 inoremap <LocalLeader>o <C-O>:ZoomWin<CR>
 noremap <C-W>+o :ZoomWin<CR>
 
 " Ack
-Bundle "http://github.com/vim-scripts/ack.vim.git"
+Bundle "ack.vim"
 noremap <LocalLeader># "ayiw:Ack <C-r>a<CR>
 vnoremap <LocalLeader># "ay:Ack <C-r>a<CR>
 
 " tComment
-Bundle "http://github.com/vim-scripts/tComment.git"
+Bundle "tComment"
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
