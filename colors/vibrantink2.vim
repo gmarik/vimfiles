@@ -19,6 +19,9 @@ let g:colors_name = "vibrantink2"
 hi MergeConflict guibg=red
 match MergeConflict /[><]\{7\} /
 
+highlight StatusLine ctermfg=black ctermbg=green cterm=NONE guifg=gray guibg=black 
+highlight StatusLineNC ctermfg=black ctermbg=lightblue cterm=NONE guifg=white guibg=gray
+
 if has("gui_running")
     highlight Normal guifg=White   guibg=Black
     highlight Cursor guifg=Black   guibg=Green
