@@ -55,13 +55,15 @@ filetype plugin indent on             " Automatically detect file types.
 set nonumber  " Line numbers off
 set showmatch  " Show matching brackets.
 set matchtime=5  " Bracket blinking.
+
 set novisualbell  " No blinking
 set noerrorbells  " No noise.
-set laststatus=2  " Always show status line.
 set vb t_vb= " disable any beeps or flashes on error
+
+set shortmess=atI " Shortens messages
+set laststatus=2  " Always show status line.
 set ruler  " Show ruler
 set showcmd " Display an incomplete command in the lower right corner of the Vim window
-set shortmess=atI " Shortens messages
 
 set nolist " Display unprintable characters f12 - switches
 set listchars=tab:·\ ,eol:¶,trail:·,extends:»,precedes:« " Unprintable chars mapping
@@ -83,7 +85,7 @@ colorscheme gmarik
 
 " Command and Auto commands " {{{
 " Sudo write
-comm! W exec 'w !sudo tee % > /dev/null' | e!
+comm! W exec 'w !sudo -t tee % > /dev/null' | e!
 
 "Auto commands
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby
