@@ -90,7 +90,7 @@ comm! W exec 'w !sudo -t tee % > /dev/null' | e!
 "Auto commands
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
-au BufRead,BufNewFile {COMMIT_EDITMSG}                                set ft=gitcommit
+au BufRead,BufNewFile {COMMIT_EDITMSG}                                set ft=gitcommit noml
 
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | execute "normal g'\"" | endif " restore position in file
 " " }}}
