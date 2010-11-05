@@ -16,10 +16,8 @@ func! g:sqlformat()
 endf
 
 func! g:commandTInstall()
-  exec ':ruby 
-        \ puts plugin_path = File.expand_path($LOAD_PATH.grep(/command-?t/i).first)
-        \ system(cd #{plugin_path}/command-t/ && git checkout 0.8.1 && ruby extconf.rb && make)
-        \'
+  exec ':ruby puts( cmd = "cd #{File.expand_path($LOAD_PATH.grep(/command-?t/i).first)}/command-t/ && git checkout -f master && ruby extconf.rb && make clean && make");
+       \ system(cmd)
+       \'
+  source 'command-t.vim'
 endf
-
-" vim: ft=vim
