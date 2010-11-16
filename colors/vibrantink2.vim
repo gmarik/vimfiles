@@ -23,6 +23,10 @@ highlight StatusLine ctermfg=black ctermbg=green cterm=NONE guifg=#ffbc29 guibg=
 highlight StatusLineNC ctermfg=black ctermbg=lightblue cterm=NONE guifg=#808080 guibg=white
 highlight VertSplit term=reverse cterm=reverse gui=none guifg=#00FF00
 
+hi Visual term=reverse cterm=reverse gui=reverse guifg=#00AA00 guibg=fg
+hi VisualNOS term=underline,bold cterm=underline,bold gui=underline,bold
+
+
 " Wildmenu and Fuzzyfinder like dynamic menus
 highlight Pmenu    guifg=white guibg=#808080
 highlight PmenuSel guifg=black guibg=#ffbc29
@@ -46,7 +50,7 @@ if has("gui_running")
     highlight Include guifg=#FFCC00 gui=NONE
     highlight Statement guifg=#FF6600 gui=NONE
     highlight String guifg=#AAFFAA
-    highlight Search guibg=yellow
+    highlight Search guibg=#00FF00
     highlight CursorLine guibg=#323300
 else
     set t_Co=256
