@@ -21,6 +21,7 @@ match MergeConflict /[><]\{7\} /
 
 highlight StatusLine ctermfg=black ctermbg=green cterm=NONE guifg=#ffbc29 guibg=black
 highlight StatusLineNC ctermfg=black ctermbg=lightblue cterm=NONE guifg=#808080 guibg=white
+highlight VertSplit term=reverse cterm=reverse gui=none guifg=#00FF00
 
 " Wildmenu and Fuzzyfinder like dynamic menus
 highlight Pmenu    guifg=white guibg=#808080
