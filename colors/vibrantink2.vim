@@ -19,8 +19,8 @@ let g:colors_name = "vibrantink2"
 hi MergeConflict guibg=red
 match MergeConflict /[><]\{7\} /
 
-highlight StatusLine ctermfg=black ctermbg=green cterm=NONE guifg=gray guibg=black 
-highlight StatusLineNC ctermfg=black ctermbg=lightblue cterm=NONE guifg=white guibg=gray
+highlight StatusLine ctermfg=black ctermbg=green cterm=NONE guifg=#ffbc29 guibg=black
+highlight StatusLineNC ctermfg=black ctermbg=lightblue cterm=NONE guifg=#808080 guibg=white
 
 " Wildmenu and Fuzzyfinder like dynamic menus
 highlight Pmenu    guifg=white guibg=#808080
