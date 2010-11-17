@@ -26,7 +26,6 @@ highlight VertSplit term=reverse cterm=reverse gui=none guifg=#00FF00
 hi Visual term=reverse cterm=reverse gui=reverse guifg=#00AA00 guibg=fg
 hi VisualNOS term=underline,bold cterm=underline,bold gui=underline,bold
 
-
 " Wildmenu and Fuzzyfinder like dynamic menus
 highlight Pmenu    guifg=white guibg=#808080
 highlight PmenuSel guifg=black guibg=#ffbc29
@@ -34,7 +33,8 @@ highlight WildMenu guifg=black guibg=#ffbc29
 
 if has("gui_running")
     highlight Normal guifg=White   guibg=Black
-    highlight Cursor guifg=Black   guibg=Green
+    highlight Cursor gui=reverse guibg=black guifg=#0aaaaa
+    highlight CursorLine guibg=#323300
     highlight Keyword guifg=#FF6600
     highlight Define guifg=#FF6600
     highlight Comment guifg=Gray
@@ -51,7 +51,6 @@ if has("gui_running")
     highlight Statement guifg=#FF6600 gui=NONE
     highlight String guifg=#AAFFAA
     highlight Search guibg=#00FF00
-    highlight CursorLine guibg=#323300
 else
     set t_Co=256
     highlight Normal ctermfg=White ctermbg=Black
