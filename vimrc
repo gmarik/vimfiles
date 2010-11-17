@@ -96,6 +96,8 @@ au! BufReadPost       COMMIT_EDITMSG                                  set ft=git
 " " }}}
 
 " Key mappings " {{{
+nnoremap <silent> <C-F> <C-U> " swap ^u  
+nnoremap <silent> <C-U> <C-F> " with ^f : convenience!
 nnoremap <silent> <LocalLeader>rs :source ~/.vimrc<CR>
 nnoremap <silent> <LocalLeader>rt :tabnew ~/.vim/vimrc<CR>
 nnoremap <silent> <LocalLeader>re :e ~/.vim/vimrc<CR>
