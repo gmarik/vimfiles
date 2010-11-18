@@ -19,12 +19,22 @@ let g:colors_name = "vibrantink2"
 hi MergeConflict guibg=red
 match MergeConflict /[><]\{7\} /
 
-highlight StatusLine ctermfg=black ctermbg=green cterm=NONE guifg=gray guibg=black 
-highlight StatusLineNC ctermfg=black ctermbg=lightblue cterm=NONE guifg=white guibg=gray
+highlight StatusLine ctermfg=black ctermbg=green cterm=NONE guifg=#ffbc29 guibg=black
+highlight StatusLineNC ctermfg=black ctermbg=lightblue cterm=NONE guifg=#808080 guibg=white
+highlight VertSplit term=reverse cterm=reverse gui=none guifg=#00FF00
+
+hi Visual term=reverse cterm=reverse gui=reverse guifg=#00AA00 guibg=fg
+hi VisualNOS term=underline,bold cterm=underline,bold gui=underline,bold
+
+" Wildmenu and Fuzzyfinder like dynamic menus
+highlight Pmenu    guifg=white guibg=#808080
+highlight PmenuSel guifg=black guibg=#ffbc29
+highlight WildMenu guifg=black guibg=#ffbc29
 
 if has("gui_running")
     highlight Normal guifg=White   guibg=Black
-    highlight Cursor guifg=Black   guibg=Green
+    highlight Cursor gui=reverse guibg=black guifg=#0aaaaa
+    highlight CursorLine guibg=#323300
     highlight Keyword guifg=#FF6600
     highlight Define guifg=#FF6600
     highlight Comment guifg=Gray
@@ -40,8 +50,7 @@ if has("gui_running")
     highlight Include guifg=#FFCC00 gui=NONE
     highlight Statement guifg=#FF6600 gui=NONE
     highlight String guifg=#AAFFAA
-    highlight Search guibg=yellow
-    highlight CursorLine guibg=#323300
+    highlight Search guibg=#00FF00
 else
     set t_Co=256
     highlight Normal ctermfg=White ctermbg=Black

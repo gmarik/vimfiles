@@ -88,14 +88,16 @@ colorscheme gmarik
 comm! W exec 'w !sudo -t tee % > /dev/null' | e!
 
 "Auto commands
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | execute "normal g'\"" | endif " restore position in file
+
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
-au BufRead,BufNewFile {COMMIT_EDITMSG}                                set ft=gitcommit noml
-
-au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | execute "normal g'\"" | endif " restore position in file
+au! BufReadPost       COMMIT_EDITMSG                                  set ft=gitcommit noml | norm 1G
 " " }}}
 
 " Key mappings " {{{
+nnoremap <silent> <C-F> <C-U> " swap ^u  
+nnoremap <silent> <C-U> <C-F> " with ^f : convenience!
 nnoremap <silent> <LocalLeader>rs :source ~/.vimrc<CR>
 nnoremap <silent> <LocalLeader>rt :tabnew ~/.vim/vimrc<CR>
 nnoremap <silent> <LocalLeader>re :e ~/.vim/vimrc<CR>
