@@ -169,7 +169,7 @@ Bundle "ragtag.vim"
 " Utility
 Bundle "repeat.vim"
 Bundle "surround.vim"
-Bundle "SuperTab"
+" Bundle "SuperTab"
 Bundle "file-line"
 Bundle "Align"
 
