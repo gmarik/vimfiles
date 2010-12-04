@@ -135,6 +135,7 @@ map <silent> <F12> :set invlist<CR>
 map <silent> <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
 " " }}}
 
+set runtimepath+=~/.vim/grep.git/ " my dev version
 set runtimepath+=~/.vim/vundle.git/ " my dev version
 
 " Plugins " {{{
@@ -197,11 +198,6 @@ noremap <LocalLeader>o :ZoomWin<CR>
 vnoremap <LocalLeader>o <C-C>:ZoomWin<CR>
 inoremap <LocalLeader>o <C-O>:ZoomWin<CR>
 noremap <C-W>+o :ZoomWin<CR>
-
-" Ack
-Bundle "ack.vim"
-noremap <LocalLeader># "ayiw:Ack <C-r>a<CR>
-vnoremap <LocalLeader># "ay:Ack <C-r>a<CR>
 
 " tComment
 Bundle "tlib"
