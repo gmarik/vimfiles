@@ -47,7 +47,7 @@ omap <special> <D-s> <Esc><D-s>
 " Copy
 nnoremap <D-c> yy
 " Duplication
-vnoremap <silent> <D-d> "dyP
-nnoremap <silent> <D-d> "dYP
+vnoremap <silent> <D-d> "dy"dp
+nnoremap <silent> <D-d> "dY"dP
 
 endif

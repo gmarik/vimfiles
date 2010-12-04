@@ -19,5 +19,5 @@ func! g:commandTInstall()
   exec ':ruby puts( cmd = "cd #{File.expand_path($LOAD_PATH.grep(/command-?t/i).first)}/command-t/ && git checkout -f master && ruby extconf.rb && make clean && make");
        \ system(cmd)
        \'
-  source 'command-t.vim'
+  runtime 'command-t.vim'
 endf
