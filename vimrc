@@ -204,6 +204,7 @@ noremap <LocalLeader># "ayiw:Ack <C-r>a<CR>
 vnoremap <LocalLeader># "ay:Ack <C-r>a<CR>
 
 " tComment
+Bundle "tlib"
 Bundle "tComment"
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
