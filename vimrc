@@ -93,6 +93,7 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | execute "norma
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
 au! BufReadPost       COMMIT_EDITMSG                                  set ft=gitcommit noml | norm 1G
+au! BufWritePost      *.snippet                                       call ReloadAllSnippets()
 " " }}}
 
 " Key mappings " {{{
