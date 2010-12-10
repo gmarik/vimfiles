@@ -9,16 +9,16 @@ set nocompatible  " disable vi compatibility.
   \ clipboard+=unnamed  " Yanks go on clipboard instead.
   \ pastetoggle=<F10> "  toggle between paste and normal: for 'safer' pasting from keyboard
   \ tags=./tags;$HOME " walk directory tree upto $HOME looking for tags
-" Modeline
+
 set modeline
   \ modelines=5 " default numbers of lines to read for modeline instructions
-" Backup
+
 set nowritebackup
   \ nobackup
   \ directory=/tmp// " prepend(^=) $HOME/.tmp/ to default path; use full path as backup filename(//)
-" Buffers
+
 set hidden " The current buffer can be put to the background without writing to disk
-" Match and search
+
 set hlsearch    " highlight search
   \ ignorecase  " Do case in sensitive matching with
   \ smartcase		" be sensitive when there's a capital letter
@@ -32,7 +32,6 @@ set fo+=o " Automatically insert the current comment leader after hitting 'o' or
 
 set nowrap
   \ textwidth=0		" Don't wrap lines by default
-  \ wildmode=longest,list " At command line, complete longest common string, then list alternatives.
 
 set backspace=indent,eol,start	" more powerful backspacing
 
@@ -55,6 +54,8 @@ filetype plugin indent on             " Automatically detect file types.
 set nonumber  " Line numbers off
   \ showmatch  " Show matching brackets.
   \ matchtime=5  " Bracket blinking.
+
+set wildmode=longest,list " At command line, complete longest common string, then list alternatives.
 
 set novisualbell  " No blinking
   \ noerrorbells  " No noise.
