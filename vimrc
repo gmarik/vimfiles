@@ -84,9 +84,6 @@ colorscheme gmarik
 
 
 " Command and Auto commands " {{{
-" Sudo write
-comm! W exec 'w !sudo -t tee % > /dev/null' | e!
-
 "Auto commands
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | execute "normal g'\"" | endif " restore position in file
 
@@ -136,18 +133,12 @@ map <silent> <LocalLeader>2h :runtime! syntax/2html.vim<CR>
 " " }}}
 
 set runtimepath+=~/.vim/grep.git/ " my dev version
+runtime plugin/grep.vim
+
 set runtimepath+=~/.vim/vundle.git/ " my dev version
 
 " Plugins " {{{
 call vundle#rc()
-
-" trying this 
-Bundle 'YankRing.vim'
-Bundle 'http://github.com/thinca/vim-quickrun.git'
-Bundle 'http://github.com/thinca/vim-poslist.git'
-Bundle 'http://github.com/mattn/gist-vim.git'
-Bundle 'http://github.com/rstacruz/sparkup.git', {'rtp': 'vim/'}
-Bundle 'http://github.com/nelstrom/vim-mac-classic-theme.git'
 
 " Programming
 Bundle 'jQuery'
@@ -168,6 +159,8 @@ Bundle 'fugitive.vim'
 Bundle 'ragtag.vim'
 
 " Utility
+Bundle 'https://github.com/gmarik/sudo-write.git'
+
 Bundle 'repeat.vim'
 Bundle 'surround.vim'
 " Bundle 'SuperTab'
@@ -175,9 +168,10 @@ Bundle 'file-line'
 Bundle 'Align'
 
 " FuzzyFinder
+let g:fuf_modesDisable = [] 
 Bundle 'L9'
-Bundle 'FuzzyFinder'
-let g:fuf_modesDisable = [] " {{{
+Bundle 'FuzzyFinder'  
+" {{{
 nnoremap <silent> <LocalLeader>h :FufHelp<CR>
 nnoremap <silent> <LocalLeader>2  :FufFileWithCurrentBufferDir<CR>
 nnoremap <silent> <LocalLeader>@  :FufFile<CR>
@@ -211,5 +205,14 @@ let g:CommandTMatchWindowAtTop=1 " show window at top
 
 " Navigation
 Bundle 'http://github.com/gmarik/vim-visual-star-search.git'
+
+" trying this 
+Bundle 'YankRing.vim'
+Bundle 'http://github.com/thinca/vim-quickrun.git'
+Bundle 'http://github.com/thinca/vim-poslist.git'
+Bundle 'http://github.com/mattn/gist-vim.git'
+Bundle 'http://github.com/rstacruz/sparkup.git', {'rtp': 'vim/'}
+Bundle 'http://github.com/nelstrom/vim-mac-classic-theme.git'
+
 
 " " }}}
