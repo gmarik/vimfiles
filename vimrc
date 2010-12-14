@@ -2,49 +2,49 @@
 
 " General "{{{
 set nocompatible  " disable vi compatibility.
-  \ history=256  " Number of things to remember in history.
-  \ autowrite  " Writes on make/shell commands
-  \ autoread  
-  \ timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-  \ clipboard+=unnamed  " Yanks go on clipboard instead.
-  \ pastetoggle=<F10> "  toggle between paste and normal: for 'safer' pasting from keyboard
-  \ tags=./tags;$HOME " walk directory tree upto $HOME looking for tags
+set history=256  " Number of things to remember in history.
+set autowrite  " Writes on make/shell commands
+set autoread  
+set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
+set clipboard+=unnamed  " Yanks go on clipboard instead.
+set pastetoggle=<F10> "  toggle between paste and normal: for 'safer' pasting from keyboard
+set tags=./tags;$HOME " walk directory tree upto $HOME looking for tags
 
 set modeline
-  \ modelines=5 " default numbers of lines to read for modeline instructions
+set modelines=5 " default numbers of lines to read for modeline instructions
 
 set nowritebackup
-  \ nobackup
-  \ directory=/tmp// " prepend(^=) $HOME/.tmp/ to default path; use full path as backup filename(//)
+set nobackup
+set directory=/tmp// " prepend(^=) $HOME/.tmp/ to default path; use full path as backup filename(//)
 
 set hidden " The current buffer can be put to the background without writing to disk
 
 set hlsearch    " highlight search
-  \ ignorecase  " Do case in sensitive matching with
-  \ smartcase		" be sensitive when there's a capital letter
-  \ incsearch   "
+set ignorecase  " Do case in sensitive matching with
+set smartcase		" be sensitive when there's a capital letter
+set incsearch   "
 " "}}}
 
 " Formatting "{{{
 set fo+=o " Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
-  \ fo-=r " Do not automatically insert a comment leader after an enter
-  \ fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
+set fo-=r " Do not automatically insert a comment leader after an enter
+set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
 
 set nowrap
-  \ textwidth=0		" Don't wrap lines by default
+set textwidth=0		" Don't wrap lines by default
 
 set backspace=indent,eol,start	" more powerful backspacing
 
 set tabstop=2    " Set the default tabstop
-  \ softtabstop=2
-  \ shiftwidth=2 " Set the default shift width for indents
-  \ expandtab   " Make tabs into spaces (set by tabstop)
-  \ smarttab " Smarter tab levels
+set softtabstop=2
+set shiftwidth=2 " Set the default shift width for indents
+set expandtab   " Make tabs into spaces (set by tabstop)
+set smarttab " Smarter tab levels
 
 set autoindent
-  \ cindent
-  \ cinoptions=:s,ps,ts,cs
-  \ cinwords=if,else,while,do,for,switch,case
+set cindent
+set cinoptions=:s,ps,ts,cs
+set cinwords=if,else,while,do,for,switch,case
 
 syntax on               " enable syntax
 filetype plugin indent on             " Automatically detect file types.
@@ -52,33 +52,33 @@ filetype plugin indent on             " Automatically detect file types.
 
 " Visual "{{{
 set nonumber  " Line numbers off
-  \ showmatch  " Show matching brackets.
-  \ matchtime=5  " Bracket blinking.
+set showmatch  " Show matching brackets.
+set matchtime=5  " Bracket blinking.
 
 set wildmode=longest,list " At command line, complete longest common string, then list alternatives.
 
 set novisualbell  " No blinking
-  \ noerrorbells  " No noise.
-  \ vb t_vb= " disable any beeps or flashes on error
+set noerrorbells  " No noise.
+set vb t_vb= " disable any beeps or flashes on error
 
 set shortmess=atI " Shortens messages
-  \ laststatus=2  " Always show status line.
-  \ ruler  " Show ruler
-  \ showcmd " Display an incomplete command in the lower right corner of the Vim window
+set laststatus=2  " Always show status line.
+set ruler  " Show ruler
+set showcmd " Display an incomplete command in the lower right corner of the Vim window
 
 set nolist " Display unprintable characters f12 - switches
-  \ listchars=tab:·\ ,eol:¶,trail:·,extends:»,precedes:« " Unprintable chars mapping
+set listchars=tab:·\ ,eol:¶,trail:·,extends:»,precedes:« " Unprintable chars mapping
 
 set foldenable " Turn on folding
-  \ foldmethod=marker " Fold on the marker
-  \ foldlevel=100 " Don't autofold anything (but I can still fold manually)
-  \ foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds 
+set foldmethod=marker " Fold on the marker
+set foldlevel=100 " Don't autofold anything (but I can still fold manually)
+set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds 
 
 set mouse-=a   " Disable mouse
-  \ mousehide  " Hide mouse after chars typed
+set mousehide  " Hide mouse after chars typed
 
 set splitbelow
-  \ splitright
+set splitright
 
 colorscheme gmarik
 " "}}}
