@@ -1,8 +1,6 @@
 set guioptions=cMg " console dialogs, do not show menu and toolbar
 set mouse=a "enable mouse in GUI mode
 
-colorscheme vibrantink2
-
 if !has('mac')
   set guifont=Terminus:h16
 end

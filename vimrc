@@ -80,7 +80,7 @@ set mousehide  " Hide mouse after chars typed
 set splitbelow
 set splitright
 
-colorscheme gmarik
+" colorscheme gmarik
 " "}}}
 
 
@@ -141,6 +141,12 @@ set runtimepath+=~/.vim/vundle.git/ " my dev version
 
 " Plugins " {{{
 call vundle#rc()
+
+" Colorscheme
+" Bundle 'molokai'
+" colorscheme molokai
+Bundle 'https://github.com/gmarik/ingretu.git'
+colorscheme ingretu
 
 " Programming
 Bundle 'jQuery'
