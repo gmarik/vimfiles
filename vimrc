@@ -199,7 +199,6 @@ Bundle 'ZoomWin'
 noremap <LocalLeader>o :ZoomWin<CR>
 vnoremap <LocalLeader>o <C-C>:ZoomWin<CR>
 inoremap <LocalLeader>o <C-O>:ZoomWin<CR>
-noremap <C-W>+o :ZoomWin<CR>
 
 " tComment
 Bundle 'tlib'
@@ -208,7 +207,7 @@ nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
 " Command-T
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'http://github.com/wincent/Command-T.git'
 let g:CommandTMatchWindowAtTop=1 " show window at top
 
 " Navigation
