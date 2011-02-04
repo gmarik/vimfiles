@@ -80,11 +80,13 @@ set mousehide  " Hide mouse after chars typed
 set splitbelow
 set splitright
 
-" colorscheme gmarik
 " "}}}
 
 
 " Command and Auto commands " {{{
+" 
+runtime! matchit
+
 "Auto commands
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | execute "normal g'\"" | endif " restore position in file
 
