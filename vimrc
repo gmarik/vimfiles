@@ -178,9 +178,9 @@ Bundle 'file-line'
 Bundle 'Align'
 
 " FuzzyFinder
-let g:fuf_modesDisable = [] 
 Bundle 'L9'
 Bundle 'FuzzyFinder'  
+let g:fuf_modesDisable = [] 
 " {{{
 nnoremap <silent> <LocalLeader>h :FufHelp<CR>
 nnoremap <silent> <LocalLeader>2  :FufFileWithCurrentBufferDir<CR>
@@ -223,5 +223,7 @@ Bundle 'http://github.com/mattn/gist-vim.git'
 Bundle 'http://github.com/rstacruz/sparkup.git', {'rtp': 'vim/'}
 Bundle 'http://github.com/nelstrom/vim-mac-classic-theme.git'
 
+" Misc stuff
+Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
 
 " " }}}
