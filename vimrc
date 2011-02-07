@@ -46,8 +46,8 @@ set cindent
 set cinoptions=:s,ps,ts,cs
 set cinwords=if,else,while,do,for,switch,case
 
-syntax on               " enable syntax
-filetype plugin indent on             " Automatically detect file types.
+syntax on                   " enable syntax
+filetype plugin indent on   " Automatically detect file types.
 " "}}}
 
 " Visual "{{{
@@ -67,24 +67,23 @@ set ruler  " Show ruler
 set showcmd " Display an incomplete command in the lower right corner of the Vim window
 
 set nolist " Display unprintable characters f12 - switches
-set listchars=tab:·\ ,eol:¶,trail:·,extends:»,precedes:« " Unprintable chars mapping
+set listchars=tab:·\ ,eol:¬,trail:·,extends:»,precedes:« " Unprintable chars mapping
 
 set foldenable " Turn on folding
 set foldmethod=marker " Fold on the marker
 set foldlevel=100 " Don't autofold anything (but I can still fold manually)
-set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds 
+set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
 
 set mouse-=a   " Disable mouse
 set mousehide  " Hide mouse after chars typed
 
 set splitbelow
 set splitright
-
 " "}}}
 
 
 " Command and Auto commands " {{{
-" 
+"
 runtime! matchit
 
 "Auto commands
