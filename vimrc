@@ -88,8 +88,6 @@ set splitright
 runtime! matchit
 
 "Auto commands
-au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | execute "normal g'\"" | endif " restore position in file
-
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
 au! BufReadPost       COMMIT_EDITMSG                                  set ft=gitcommit noml | norm 1G
@@ -176,6 +174,7 @@ Bundle 'surround.vim'
 " Bundle 'SuperTab'
 Bundle 'file-line'
 Bundle 'Align'
+Bundle 'lastpos.vim'
 
 " FuzzyFinder
 Bundle 'L9'
