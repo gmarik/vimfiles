@@ -208,6 +208,8 @@ Bundle 'http://github.com/gmarik/vim-visual-star-search.git'
 
 " trying this 
 Bundle 'YankRing.vim'
+Bundle 'Indent-Guides'
+let g:indent_guides_guide_size = 1
 Bundle 'http://github.com/thinca/vim-quickrun.git'
 Bundle 'http://github.com/thinca/vim-poslist.git'
 Bundle 'http://github.com/mattn/gist-vim.git'
