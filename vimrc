@@ -103,9 +103,6 @@ nnoremap <silent> <C-J> gEa<CR><ESC>ew
 " map <silent> <C-W>v :vnew<CR>
 " map <silent> <C-W>s :snew<CR>
 
-nnoremap # :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
-nnoremap * #
-
 map <S-CR> A<CR><ESC>
 "
 " Control+S and Control+Q are flow-control characters: disable them in your terminal settings.
@@ -179,6 +176,12 @@ Bundle 'tComment'
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
+Bundle 'http://github.com/gmarik/hlselection.vim.git'
+nnoremap # :<C-u>HlSelCword<CR>
+nnoremap <leader># :<C-u>HlSelGrepCword<CR>
+vnoremap # :<C-u>HlSelVSel<CR>
+vnoremap <leader># :<C-u>HlSelGrepVSel<CR>
+
 
 " FuzzyFinder
 Bundle 'L9'
@@ -202,9 +205,6 @@ nnoremap <silent> <LocalLeader>9  :FufTaggedFile<CR>
 " Command-T
 Bundle 'http://github.com/wincent/Command-T.git'
 let g:CommandTMatchWindowAtTop=1 " show window at top
-
-" Navigation
-Bundle 'http://github.com/gmarik/vim-visual-star-search.git'
 
 " Misc stuff
 Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
