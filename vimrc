@@ -137,7 +137,7 @@ map <silent> <LocalLeader>2h :runtime! syntax/2html.vim<CR>
 set runtimepath+=~/.vim/grep.git/ " my dev version
 runtime plugin/grep.vim
 
-set runtimepath+=~/.vim/vundle.git/ " my dev version
+set runtimepath+=~/.vim/bundle/vundle.git/ " my dev version
 
 " Plugins " {{{
 call vundle#rc()
