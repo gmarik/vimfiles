@@ -1,25 +1,25 @@
 " General "{{{
-set nocompatible       " disable vi compatibility.
-set history=256        " Number of things to remember in history.
-set autowrite          " Writes on make/shell commands
+set nocompatible           " disable vi compatibility.
+set history=256            " Number of things to remember in history.
+set autowrite              " Writes on make/shell commands
 set autoread
-set timeoutlen=250     " Time to wait after ESC (default causes an annoying delay)
-set clipboard+=unnamed " Yanks go on clipboard instead.
-set pastetoggle=<F10>  " toggle between paste and normal: for 'safer' pasting from keyboard
-set tags=./tags;$HOME  " walk directory tree upto $HOME looking for tags
+set timeoutlen=250         " Time to wait after ESC (default causes an annoying delay)
+set clipboard+=unnamed     " Yanks go on clipboard instead.
+set pastetoggle=<F10>      " toggle between paste and normal: for 'safer' pasting from keyboard
+set tags=./tags;$HOME      " walk directory tree upto $HOME looking for tags
 
 set modeline
-set modelines=5        " default numbers of lines to read for modeline instructions
+set modelines=5            " default numbers of lines to read for modeline instructions
 
 set nowritebackup
 set nobackup
-set directory=/tmp//   " prepend(^=) $HOME/.tmp/ to default path; use full path as backup filename(//)
+set directory=/tmp//       " prepend(^=) $HOME/.tmp/ to default path; use full path as backup filename(//)
 
-set hidden             " The current buffer can be put to the background without writing to disk
+set hidden                 " The current buffer can be put to the background without writing to disk
 
-set hlsearch           " highlight search
-set smartcase          " be case sensitive when input has a capital letter
-set incsearch          " show matches while typing
+set hlsearch               " highlight search
+set smartcase              " be case sensitive when input has a capital letter
+set incsearch              " show matches while typing
 " "}}}
 
 " Formatting "{{{
@@ -39,44 +39,52 @@ set shiftwidth=2               " default shift width for indents
 set expandtab                  " replace tabs with ${tabstop} spaces
 set smarttab                   "
 
-set backspace=indent,eol,start "
+set backspace=indent 
+set backspace+=eol
+set backspace+=start
 
 set autoindent
 set cindent
 set cinoptions=:s,ps,ts,cs
-set cinwords=if,else,while,do,for,switch,case
+set cinwords=if,else,while,do
+set cinwords+=for,switch,case
 " "}}}
 
 " Visual "{{{
-set nonumber              " Line numbers off
-set showmatch             " Show matching brackets.
-set matchtime=2           " Bracket blinking.
+set nonumber                  " Line numbers off
+set showmatch                 " Show matching brackets.
+set matchtime=2               " Bracket blinking.
 
-set wildmode=longest,list " At command line, complete longest common string, then list alternatives.
+set wildmode=longest,list     " At command line, complete longest common string, then list alternatives.
 
-set novisualbell          " No blinking
-set noerrorbells          " No noise.
-set vb t_vb=              " disable any beeps or flashes on error
+set novisualbell              " No blinking
+set noerrorbells              " No noise.
+set vb t_vb=                  " disable any beeps or flashes on error
 
-set shortmess=atI         " shortens messages
-set laststatus=2          " always show status line.
-set showcmd               " display an incomplete command in statusline
+set shortmess=atI             " shortens messages
+set laststatus=2              " always show status line.
+set showcmd                   " display an incomplete command in statusline
 set ruler
 
-set mouse-=a              " Disable mouse
-set mousehide             " Hide mouse after chars typed
+set mouse-=a                  " Disable mouse
+set mousehide                 " Hide mouse after chars typed
 
-set nolist                " Not display unprintable characters f12 - switches
-set listchars=tab:·\ ,eol:¬,trail:·,extends:»,precedes:« " map unprintable chars
+set foldenable                " Turn on folding
+set foldmethod=marker         " Fold on the marker
+set foldlevel=100             " Don't autofold anything (but I can still fold manually)
+
+set foldopen=block,hor,tag    " what movements open folds
+set foldopen+=percent,mark
+set foldopen+=quickfix
+
+set splitbelow
+set splitright
+
+set nolist                    " Not display unprintable characters f12 - switches
+set listchars+=tab:·\ ,eol:¬
+set listchars+=trail:·
+set listchars+=extends:»,precedes:«
 map <silent> <F12> :set invlist<CR>
-
-set foldenable                                   " Turn on folding
-set foldmethod=marker                            " Fold on the marker
-set foldlevel=100                                " Don't autofold anything (but I can still fold manually)
-set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
-
-set splitbelow                                   " 
-set splitright                                   " 
 " "}}}
 
 " Key mappings " {{{
