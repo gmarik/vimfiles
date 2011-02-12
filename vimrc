@@ -88,23 +88,23 @@ map <silent> <F12> :set invlist<CR>
 " "}}}
 
 " Key mappings " {{{
-nnoremap <silent> <C-F> <C-U> " swap ^u  
-nnoremap <silent> <C-U> <C-F> " with ^f : convenience!
-nnoremap <silent> <LocalLeader>rs :source ~/.vimrc<CR>
-nnoremap <silent> <LocalLeader>rt :tabnew ~/.vim/vimrc<CR>
-nnoremap <silent> <LocalLeader>re :e ~/.vim/vimrc<CR>
-nnoremap <silent> <LocalLeader>rd :e ~/.vim/ <CR>
+nnoremap <C-F> <C-U> " swap ^u  
+nnoremap <C-U> <C-F> " with ^f : convenience!
+nnoremap <LocalLeader>rs :source ~/.vimrc<CR>
+nnoremap <LocalLeader>rt :tabnew ~/.vim/vimrc<CR>
+nnoremap <LocalLeader>re :e ~/.vim/vimrc<CR>
+nnoremap <LocalLeader>rd :e ~/.vim/ <CR>
 
 " Tabs 
-nnoremap <silent> <LocalLeader>[ :tabprev<CR>
-nnoremap <silent> <LocalLeader>] :tabnext<CR>
+nnoremap <LocalLeader>[ :tabprev<CR>
+nnoremap <LocalLeader>] :tabnext<CR>
 " Duplication 
-vnoremap <silent> <LocalLeader>= yP
-nnoremap <silent> <LocalLeader>= YP
+vnoremap <LocalLeader>= yP
+nnoremap <LocalLeader>= YP
 " Buffers
-nnoremap <silent> <LocalLeader>- :bd<CR>
+nnoremap <LocalLeader>- :bd<CR>
 " Split line(opposite to S-J joining line) 
-nnoremap <silent> <C-J> gEa<CR><ESC>ew 
+nnoremap <C-J> gEa<CR><ESC>ew 
 
 " map <silent> <C-W>v :vnew<CR>
 " map <silent> <C-W>s :snew<CR>
@@ -119,7 +119,7 @@ vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
 "
 " generate HTML version current buffer using current color scheme
-map <silent> <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
+map <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
 " " }}}
 
 " AutoCommands " {{{
@@ -195,18 +195,18 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'  
 " FuF customisations "{{{
 let g:fuf_modesDisable = [] 
-nnoremap <silent> <LocalLeader>h :FufHelp<CR>
-nnoremap <silent> <LocalLeader>2  :FufFileWithCurrentBufferDir<CR>
-nnoremap <silent> <LocalLeader>@  :FufFile<CR>
-nnoremap <silent> <LocalLeader>3  :FufBuffer<CR>
-nnoremap <silent> <LocalLeader>4  :FufDirWithCurrentBufferDir<CR>
-nnoremap <silent> <LocalLeader>$  :FufDir<CR>
-nnoremap <silent> <LocalLeader>5  :FufChangeList<CR>
-nnoremap <silent> <LocalLeader>6  :FufMruFile<CR>
-nnoremap <silent> <LocalLeader>7  :FufLine<CR>
-nnoremap <silent> <LocalLeader>8  :FufBookmark<CR> 
-nnoremap <silent> <LocalLeader>*  :FuzzyFinderAddBookmark<CR><CR>
-nnoremap <silent> <LocalLeader>9  :FufTaggedFile<CR> 
+nnoremap <LocalLeader>h :FufHelp<CR>
+nnoremap <LocalLeader>2  :FufFileWithCurrentBufferDir<CR>
+nnoremap <LocalLeader>@  :FufFile<CR>
+nnoremap <LocalLeader>3  :FufBuffer<CR>
+nnoremap <LocalLeader>4  :FufDirWithCurrentBufferDir<CR>
+nnoremap <LocalLeader>$  :FufDir<CR>
+nnoremap <LocalLeader>5  :FufChangeList<CR>
+nnoremap <LocalLeader>6  :FufMruFile<CR>
+nnoremap <LocalLeader>7  :FufLine<CR>
+nnoremap <LocalLeader>8  :FufBookmark<CR> 
+nnoremap <LocalLeader>*  :FuzzyFinderAddBookmark<CR><CR>
+nnoremap <LocalLeader>9  :FufTaggedFile<CR> 
 " " }}}
 
 " Command-T
