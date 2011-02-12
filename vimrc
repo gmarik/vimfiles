@@ -114,7 +114,7 @@ inoremap <C-S> <C-O>:update<CR>
 map <silent> <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
 " " }}}
 
-" commands " {{{
+" AutoCommands " {{{
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
 au! BufReadPost       COMMIT_EDITMSG                                  set ft=gitcommit noml | norm 1G
@@ -130,6 +130,8 @@ call vundle#rc()
 " Colorscheme
 " Bundle 'molokai'
 " colorscheme molokai
+" Bundle 'http://github.com/nelstrom/vim-mac-classic-theme.git'
+
 Bundle 'https://github.com/gmarik/ingretu.git'
 colorscheme ingretu
 
@@ -216,5 +218,4 @@ Bundle 'http://github.com/thinca/vim-quickrun.git'
 Bundle 'http://github.com/thinca/vim-poslist.git'
 Bundle 'http://github.com/mattn/gist-vim.git'
 Bundle 'http://github.com/rstacruz/sparkup.git', {'rtp': 'vim/'}
-Bundle 'http://github.com/nelstrom/vim-mac-classic-theme.git'
 " " }}}
