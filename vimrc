@@ -161,6 +161,9 @@ Bundle 'file-line'
 Bundle 'Align'
 Bundle 'lastpos.vim'
 
+Bundle 'Indent-Guides'
+let g:indent_guides_guide_size = 1
+
 Bundle 'ZoomWin'
 noremap <LocalLeader>o :ZoomWin<CR>
 vnoremap <LocalLeader>o <C-C>:ZoomWin<CR>
@@ -176,7 +179,6 @@ nnoremap # :<C-u>HlSelCword<CR>
 nnoremap <leader># :<C-u>HlSelGrepCword<CR>
 vnoremap # :<C-u>HlSelVSel<CR>
 vnoremap <leader># :<C-u>HlSelGrepVSel<CR>
-
 
 " FuzzyFinder
 Bundle 'L9'
@@ -210,8 +212,6 @@ runtime plugin/grep.vim
 
 " trying this 
 Bundle 'YankRing.vim'
-Bundle 'Indent-Guides'
-let g:indent_guides_guide_size = 1
 Bundle 'http://github.com/thinca/vim-quickrun.git'
 Bundle 'http://github.com/thinca/vim-poslist.git'
 Bundle 'http://github.com/mattn/gist-vim.git'
