@@ -79,13 +79,9 @@ set mousehide  " Hide mouse after chars typed
 
 set splitbelow
 set splitright
-
 " "}}}
 
-
 " Command and Auto commands " {{{
-" 
-runtime macros/matchit.vim
 
 "Auto commands
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
@@ -134,12 +130,10 @@ map <silent> <F12> :set invlist<CR>
 map <silent> <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
 " " }}}
 
-set runtimepath+=~/.vim/grep.git/ " my dev version
-runtime plugin/grep.vim
+" Scripts and Bundles " {{{
+runtime macros/matchit.vim
 
-set runtimepath+=~/.vim/bundle/vundle.git/ " my dev version
-
-" Plugins " {{{
+set rtp+=~/.vim/bundle/vundle.git/
 call vundle#rc()
 
 " Colorscheme
@@ -179,8 +173,8 @@ Bundle 'lastpos.vim'
 " FuzzyFinder
 Bundle 'L9'
 Bundle 'FuzzyFinder'  
+" FuF customisations "{{{
 let g:fuf_modesDisable = [] 
-" {{{
 nnoremap <silent> <LocalLeader>h :FufHelp<CR>
 nnoremap <silent> <LocalLeader>2  :FufFileWithCurrentBufferDir<CR>
 nnoremap <silent> <LocalLeader>@  :FufFile<CR>
@@ -224,5 +218,9 @@ Bundle 'http://github.com/nelstrom/vim-mac-classic-theme.git'
 
 " Misc stuff
 Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
+
+" my dev stuff
+set rtp+=~/.vim/grep.git/ " my dev version
+runtime plugin/grep.vim
 
 " " }}}
