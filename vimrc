@@ -1,84 +1,82 @@
-" TODO: http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/225852#225852
-
 " General "{{{
-set nocompatible  " disable vi compatibility.
-set history=256  " Number of things to remember in history.
-set autowrite  " Writes on make/shell commands
-set autoread  
-set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-set clipboard+=unnamed  " Yanks go on clipboard instead.
-set pastetoggle=<F10> "  toggle between paste and normal: for 'safer' pasting from keyboard
-set tags=./tags;$HOME " walk directory tree upto $HOME looking for tags
+set nocompatible       " disable vi compatibility.
+set history=256        " Number of things to remember in history.
+set autowrite          " Writes on make/shell commands
+set autoread
+set timeoutlen=250     " Time to wait after ESC (default causes an annoying delay)
+set clipboard+=unnamed " Yanks go on clipboard instead.
+set pastetoggle=<F10>  " toggle between paste and normal: for 'safer' pasting from keyboard
+set tags=./tags;$HOME  " walk directory tree upto $HOME looking for tags
 
 set modeline
-set modelines=5 " default numbers of lines to read for modeline instructions
+set modelines=5        " default numbers of lines to read for modeline instructions
 
 set nowritebackup
 set nobackup
-set directory=/tmp// " prepend(^=) $HOME/.tmp/ to default path; use full path as backup filename(//)
+set directory=/tmp//   " prepend(^=) $HOME/.tmp/ to default path; use full path as backup filename(//)
 
-set hidden " The current buffer can be put to the background without writing to disk
+set hidden             " The current buffer can be put to the background without writing to disk
 
-set hlsearch    " highlight search
-set ignorecase  " Do case in sensitive matching with
-set smartcase		" be sensitive when there's a capital letter
-set incsearch   "
+set hlsearch           " highlight search
+set smartcase          " be case sensitive when input has a capital letter
+set incsearch          " show matches while typing
 " "}}}
 
 " Formatting "{{{
-set fo+=o " Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
-set fo-=r " Do not automatically insert a comment leader after an enter
-set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
+syntax on                      " enable syntax
+filetype plugin indent on      " Automatically detect file types.
+
+set fo+=o                      " Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
+set fo-=r                      " Do not automatically insert a comment leader after an enter
+set fo-=t                      " Do no auto-wrap text using textwidth (does not apply to comments)
 
 set nowrap
-set textwidth=0		" Don't wrap lines by default
+set textwidth=0                " Don't wrap lines by default
 
-set backspace=indent,eol,start	" more powerful backspacing
-
-set tabstop=2    " Set the default tabstop
+set tabstop=2                  " tab size eql 2 spaces
 set softtabstop=2
-set shiftwidth=2 " Set the default shift width for indents
-set expandtab   " Make tabs into spaces (set by tabstop)
-set smarttab " Smarter tab levels
+set shiftwidth=2               " default shift width for indents
+set expandtab                  " replace tabs with ${tabstop} spaces
+set smarttab                   "
+
+set backspace=indent,eol,start "
 
 set autoindent
 set cindent
 set cinoptions=:s,ps,ts,cs
 set cinwords=if,else,while,do,for,switch,case
-
-syntax on               " enable syntax
-filetype plugin indent on             " Automatically detect file types.
 " "}}}
 
 " Visual "{{{
-set nonumber  " Line numbers off
-set showmatch  " Show matching brackets.
-set matchtime=5  " Bracket blinking.
+set nonumber              " Line numbers off
+set showmatch             " Show matching brackets.
+set matchtime=2           " Bracket blinking.
 
 set wildmode=longest,list " At command line, complete longest common string, then list alternatives.
 
-set novisualbell  " No blinking
-set noerrorbells  " No noise.
-set vb t_vb= " disable any beeps or flashes on error
+set novisualbell          " No blinking
+set noerrorbells          " No noise.
+set vb t_vb=              " disable any beeps or flashes on error
 
-set shortmess=atI " Shortens messages
-set laststatus=2  " Always show status line.
-set ruler  " Show ruler
-set showcmd " Display an incomplete command in the lower right corner of the Vim window
+set shortmess=atI         " shortens messages
+set laststatus=2          " always show status line.
+set showcmd               " display an incomplete command in statusline
+set ruler
 
-set nolist " Display unprintable characters f12 - switches
-set listchars=tab:·\ ,eol:¶,trail:·,extends:»,precedes:« " Unprintable chars mapping
+set mouse-=a              " Disable mouse
+set mousehide             " Hide mouse after chars typed
 
-set foldenable " Turn on folding
-set foldmethod=marker " Fold on the marker
-set foldlevel=100 " Don't autofold anything (but I can still fold manually)
-set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds 
+set nolist                " Not display unprintable characters f12 - switches
+set listchars=tab:·\ ,eol:¬,trail:·,extends:»,precedes:« " map unprintable chars
+map <silent> <F12> :set invlist<CR>
 
-set mouse-=a   " Disable mouse
-set mousehide  " Hide mouse after chars typed
+set foldenable                                   " Turn on folding
+set foldmethod=marker                            " Fold on the marker
+set foldlevel=100                                " Don't autofold anything (but I can still fold manually)
+set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
 
-set splitbelow
-set splitright
+set splitbelow                                   " 
+set splitright                                   " 
 " "}}}
 
 " Key mappings " {{{
@@ -104,6 +102,7 @@ nnoremap <silent> <C-J> gEa<CR><ESC>ew
 " map <silent> <C-W>s :snew<CR>
 
 map <S-CR> A<CR><ESC>
+
 "
 " Control+S and Control+Q are flow-control characters: disable them in your terminal settings.
 " $ stty -ixon -ixoff
@@ -111,15 +110,11 @@ noremap <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
 "
-" show/Hide hidden Chars
-map <silent> <F12> :set invlist<CR>     
-"
 " generate HTML version current buffer using current color scheme
 map <silent> <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
 " " }}}
 
-" Command and Auto commands " {{{
-"Auto commands
+" commands " {{{
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
 au! BufReadPost       COMMIT_EDITMSG                                  set ft=gitcommit noml | norm 1G
@@ -215,6 +210,8 @@ runtime plugin/grep.vim
 
 " trying this 
 Bundle 'YankRing.vim'
+Bundle 'Indent-Guides'
+let g:indent_guides_guide_size = 1
 Bundle 'http://github.com/thinca/vim-quickrun.git'
 Bundle 'http://github.com/thinca/vim-poslist.git'
 Bundle 'http://github.com/mattn/gist-vim.git'
