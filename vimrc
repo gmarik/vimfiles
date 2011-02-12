@@ -81,15 +81,6 @@ set splitbelow
 set splitright
 " "}}}
 
-" Command and Auto commands " {{{
-
-"Auto commands
-au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
-au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
-au! BufReadPost       COMMIT_EDITMSG                                  set ft=gitcommit noml | norm 1G
-au! BufWritePost      *.snippet                                       call ReloadAllSnippets()
-" " }}}
-
 " Key mappings " {{{
 nnoremap <silent> <C-F> <C-U> " swap ^u  
 nnoremap <silent> <C-U> <C-F> " with ^f : convenience!
@@ -128,6 +119,14 @@ map <silent> <F12> :set invlist<CR>
 "
 " generate HTML version current buffer using current color scheme
 map <silent> <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
+" " }}}
+
+" Command and Auto commands " {{{
+"Auto commands
+au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
+au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
+au! BufReadPost       COMMIT_EDITMSG                                  set ft=gitcommit noml | norm 1G
+au! BufWritePost      *.snippet                                       call ReloadAllSnippets()
 " " }}}
 
 " Scripts and Bundles " {{{
