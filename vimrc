@@ -85,7 +85,7 @@ set splitright
 
 " Command and Auto commands " {{{
 " 
-runtime! matchit
+runtime macros/matchit.vim
 
 "Auto commands
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
