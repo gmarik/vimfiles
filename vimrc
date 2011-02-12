@@ -169,6 +169,17 @@ Bundle 'file-line'
 Bundle 'Align'
 Bundle 'lastpos.vim'
 
+Bundle 'ZoomWin'
+noremap <LocalLeader>o :ZoomWin<CR>
+vnoremap <LocalLeader>o <C-C>:ZoomWin<CR>
+inoremap <LocalLeader>o <C-O>:ZoomWin<CR>
+
+Bundle 'tlib'
+Bundle 'tComment'
+nnoremap // :TComment<CR>
+vnoremap // :TComment<CR>
+
+
 " FuzzyFinder
 Bundle 'L9'
 Bundle 'FuzzyFinder'  
@@ -188,32 +199,12 @@ nnoremap <silent> <LocalLeader>*  :FuzzyFinderAddBookmark<CR><CR>
 nnoremap <silent> <LocalLeader>9  :FufTaggedFile<CR> 
 " " }}}
 
-" Zoomwin
-Bundle 'ZoomWin'
-noremap <LocalLeader>o :ZoomWin<CR>
-vnoremap <LocalLeader>o <C-C>:ZoomWin<CR>
-inoremap <LocalLeader>o <C-O>:ZoomWin<CR>
-
-" tComment
-Bundle 'tlib'
-Bundle 'tComment'
-nnoremap // :TComment<CR>
-vnoremap // :TComment<CR>
-
 " Command-T
 Bundle 'http://github.com/wincent/Command-T.git'
 let g:CommandTMatchWindowAtTop=1 " show window at top
 
 " Navigation
 Bundle 'http://github.com/gmarik/vim-visual-star-search.git'
-
-" trying this 
-Bundle 'YankRing.vim'
-Bundle 'http://github.com/thinca/vim-quickrun.git'
-Bundle 'http://github.com/thinca/vim-poslist.git'
-Bundle 'http://github.com/mattn/gist-vim.git'
-Bundle 'http://github.com/rstacruz/sparkup.git', {'rtp': 'vim/'}
-Bundle 'http://github.com/nelstrom/vim-mac-classic-theme.git'
 
 " Misc stuff
 Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
@@ -222,4 +213,11 @@ Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
 set rtp+=~/.vim/grep.git/ " my dev version
 runtime plugin/grep.vim
 
+" trying this 
+Bundle 'YankRing.vim'
+Bundle 'http://github.com/thinca/vim-quickrun.git'
+Bundle 'http://github.com/thinca/vim-poslist.git'
+Bundle 'http://github.com/mattn/gist-vim.git'
+Bundle 'http://github.com/rstacruz/sparkup.git', {'rtp': 'vim/'}
+Bundle 'http://github.com/nelstrom/vim-mac-classic-theme.git'
 " " }}}
