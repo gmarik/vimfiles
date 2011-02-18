@@ -60,6 +60,15 @@ set wildmode=longest,list     " At command line, complete longest common string,
 set completeopt=longest,menu  "
 set completeopt+=preview
 
+" http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <C-p> pumvisible() ? '<C-n>' :
+  \ '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
 set novisualbell              " No blinking
 set noerrorbells              " No noise.
 set vb t_vb=                  " disable any beeps or flashes on error
