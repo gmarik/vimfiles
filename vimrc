@@ -155,7 +155,9 @@ call vundle#rc()
 " Bundle 'http://github.com/nelstrom/vim-mac-classic-theme.git'
 
 Bundle 'https://github.com/gmarik/ingretu.git'
-colorscheme ingretu
+if has("gui_running") 
+  colorscheme ingretu 
+endif
 
 " Programming
 Bundle 'jQuery'
