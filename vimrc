@@ -237,7 +237,6 @@ set rtp+=~/.vim/grep.git/ " my dev version
 runtime plugin/grep.vim
 
 " trying this 
-Bundle 'YankRing.vim'
 Bundle 'http://github.com/thinca/vim-quickrun.git'
 Bundle 'http://github.com/thinca/vim-poslist.git'
 Bundle 'http://github.com/mattn/gist-vim.git'
