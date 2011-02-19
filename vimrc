@@ -127,7 +127,7 @@ map <LocalLeader>2h :runtime! syntax/2html.vim<CR>
 " AutoCommands " {{{
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
-au! BufReadPost       {COMMIT_EDITMSG,.git/COMMIT_EDITMSG}            set ft=gitcommit noml list| norm 1G
+au! BufReadPost       {COMMIT_EDITMSG,*/COMMIT_EDITMSG}               set ft=gitcommit noml list| norm 1G
 au! BufWritePost      *.snippet                                       call ReloadAllSnippets()
 " " }}}
 
