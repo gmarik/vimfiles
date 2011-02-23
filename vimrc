@@ -198,11 +198,11 @@ Bundle 'tComment'
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
-Bundle 'http://github.com/gmarik/hlselection.vim.git'
-nnoremap # :<C-u>HlSelCword<CR>
-nnoremap <leader># :<C-u>HlSelGrepCword<CR>
-vnoremap # :<C-u>HlSelVSel<CR>
-vnoremap <leader># :<C-u>HlSelGrepVSel<CR>
+Bundle 'http://github.com/gmarik/hlmatch.vim.git'
+nnoremap # :<C-u>HlmCword<CR>
+nnoremap <leader># :<C-u>HlmGrepCword<CR>
+vnoremap # :<C-u>HlmVSel<CR>
+vnoremap <leader># :<C-u>HlmGrepVSel<CR>
 
 " FuzzyFinder
 Bundle 'L9'
