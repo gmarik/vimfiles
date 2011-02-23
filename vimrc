@@ -45,6 +45,8 @@ set backspace+=start
 
 set autoindent
 set cindent
+set indentkeys-=0#            " do not break indent on #
+set cinkeys-=0#
 set cinoptions=:s,ps,ts,cs
 set cinwords=if,else,while,do
 set cinwords+=for,switch,case
