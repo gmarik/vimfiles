@@ -13,8 +13,8 @@ set modelines=5                " default numbers of lines to read for modeline i
 set autowrite                  " Writes on make/shell commands
 set autoread
 
-set nowritebackup
 set nobackup
+set nowritebackup
 set directory=/tmp//           " prepend(^=) $HOME/.tmp/ to default path; use full path as backup filename(//)
 
 set hidden                     " The current buffer can be put to the background without writing to disk
@@ -73,8 +73,8 @@ set novisualbell              " No blinking
 set noerrorbells              " No noise.
 set vb t_vb=                  " disable any beeps or flashes on error
 
-set shortmess=atI             " shortens messages
 set laststatus=2              " always show status line.
+set shortmess=atI             " shortens messages
 set showcmd                   " display an incomplete command in statusline
 set ruler
 
