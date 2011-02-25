@@ -45,6 +45,8 @@ set backspace+=start
 
 set autoindent
 set cindent
+set indentkeys-=0#            " do not break indent on #
+set cinkeys-=0#
 set cinoptions=:s,ps,ts,cs
 set cinwords=if,else,while,do
 set cinwords+=for,switch,case
@@ -56,6 +58,14 @@ set showmatch                 " Show matching brackets.
 set matchtime=2               " Bracket blinking.
 
 set wildmode=longest,list     " At command line, complete longest common string, then list alternatives.
+
+set completeopt=longest,menu  "
+set completeopt+=preview
+
+" http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+inoremap <expr> <CR>  pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+snoremap <expr> <C-p> pumvisible() ? '<C-n>' : '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
 
 set novisualbell              " No blinking
 set noerrorbells              " No noise.
@@ -143,7 +153,9 @@ call vundle#rc()
 " Bundle 'http://github.com/nelstrom/vim-mac-classic-theme.git'
 
 Bundle 'https://github.com/gmarik/ingretu.git'
-colorscheme ingretu
+if has("gui_running") 
+  colorscheme ingretu 
+endif
 
 " Programming
 Bundle 'jQuery'
@@ -186,11 +198,11 @@ Bundle 'tComment'
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
-Bundle 'http://github.com/gmarik/hlselection.vim.git'
-nnoremap # :<C-u>HlSelCword<CR>
-nnoremap <leader># :<C-u>HlSelGrepCword<CR>
-vnoremap # :<C-u>HlSelVSel<CR>
-vnoremap <leader># :<C-u>HlSelGrepVSel<CR>
+Bundle 'http://github.com/gmarik/hlmatch.vim.git'
+nnoremap # :<C-u>HlmCword<CR>
+nnoremap <leader># :<C-u>HlmGrepCword<CR>
+vnoremap # :<C-u>HlmVSel<CR>
+vnoremap <leader># :<C-u>HlmGrepVSel<CR>
 
 " FuzzyFinder
 Bundle 'L9'
@@ -223,7 +235,6 @@ set rtp+=~/.vim/grep.git/ " my dev version
 runtime plugin/grep.vim
 
 " trying this 
-Bundle 'YankRing.vim'
 Bundle 'http://github.com/thinca/vim-quickrun.git'
 Bundle 'http://github.com/thinca/vim-poslist.git'
 Bundle 'http://github.com/mattn/gist-vim.git'
