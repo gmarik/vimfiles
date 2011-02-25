@@ -1,8 +1,7 @@
 " General "{{{
-set nocompatible               " disable vi compatibility.
+set nocompatible               " be iMproved
+
 set history=256                " Number of things to remember in history.
-set autowrite                  " Writes on make/shell commands
-set autoread
 set timeoutlen=250             " Time to wait after ESC (default causes an annoying delay)
 set clipboard+=unnamed         " Yanks go on clipboard instead.
 set pastetoggle=<F10>          " toggle between paste and normal: for 'safer' pasting from keyboard
@@ -10,6 +9,9 @@ set tags=./tags;$HOME          " walk directory tree upto $HOME looking for tags
 
 set modeline
 set modelines=5                " default numbers of lines to read for modeline instructions
+
+set autowrite                  " Writes on make/shell commands
+set autoread
 
 set nowritebackup
 set nobackup
