@@ -76,7 +76,11 @@ set vb t_vb=                  " disable any beeps or flashes on error
 set laststatus=2              " always show status line.
 set shortmess=atI             " shortens messages
 set showcmd                   " display an incomplete command in statusline
-set ruler
+
+set statusline=%<%f\          " custom statusline
+set stl+=[%{&ff}]             " show fileformat
+set stl+=%y%m%r%=
+set stl+=%-14.(%l,%c%V%)\ %P
 
 set mouse-=a                  " Disable mouse
 set mousehide                 " Hide mouse after chars typed
