@@ -96,7 +96,7 @@ set foldopen+=quickfix
 set splitbelow
 set splitright
 
-set nolist                    " Not display unprintable characters f12 - switches
+set list                      " display unprintable characters f12 - switches
 set listchars=tab:°\ ,eol:¬
 set listchars+=trail:·
 set listchars+=extends:»,precedes:«
