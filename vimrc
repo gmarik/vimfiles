@@ -127,7 +127,7 @@ nnoremap <C-J> gEa<CR><ESC>ew
 
 map <S-CR> A<CR><ESC>
 
-map <LocalLeader>E :Ex<CR>
+map <LocalLeader>E :Explore<CR>
 
 "
 " Control+S and Control+Q are flow-control characters: disable them in your terminal settings.
