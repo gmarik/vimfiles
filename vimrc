@@ -150,7 +150,7 @@ au! BufWritePost      *.snippet                                       call Reloa
 " Scripts and Bundles " {{{
 runtime macros/matchit.vim
 
-set rtp+=~/.vim/bundle/vundle.git/
+set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
 " Colorscheme
