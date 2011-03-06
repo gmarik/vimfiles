@@ -22,6 +22,8 @@ set hidden                     " The current buffer can be put to the background
 set hlsearch                   " highlight search
 set smartcase                  " be case sensitive when input has a capital letter
 set incsearch                  " show matches while typing
+
+let g:is_posix = 1             " vim's default is archaic bourne shell, bring it up to the 90s
 " "}}}
 
 " Formatting "{{{
