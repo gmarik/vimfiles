@@ -131,6 +131,12 @@ map <S-CR> A<CR><ESC>
 
 map <LocalLeader>E :Explore<CR>
 
+" Make Control-direction switch between windows (like C-W h, etc)
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+
 "
 " Control+S and Control+Q are flow-control characters: disable them in your terminal settings.
 " $ stty -ixon -ixoff
