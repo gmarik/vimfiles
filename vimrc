@@ -241,12 +241,11 @@ set rtp+=~/.vim/grep.git/ " my dev version
 runtime plugin/grep.vim
 
 " trying this 
-Bundle 'https://github.com/int3/vim-extradite'
 Bundle 'unimpaired.vim'
+Bundle 'Gundo'
+Bundle 'https://github.com/int3/vim-extradite'
 Bundle 'http://github.com/thinca/vim-quickrun.git'
 Bundle 'http://github.com/thinca/vim-poslist.git'
 Bundle 'http://github.com/mattn/gist-vim.git'
 Bundle 'http://github.com/rstacruz/sparkup.git', {'rtp': 'vim/'}
-Bundle 'Conque-Shell'
-Bundle 'The-NERD-tree'
 " " }}}
