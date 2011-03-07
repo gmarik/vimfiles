@@ -251,6 +251,7 @@ set rtp+=~/.vim/grep.git/ " my dev version
 runtime plugin/grep.vim
 
 " trying this 
+Bundle 'neverland.vim--All-colorschemes-suck'
 Bundle 'unimpaired.vim'
 Bundle 'Gundo'
 Bundle 'https://github.com/int3/vim-extradite'
