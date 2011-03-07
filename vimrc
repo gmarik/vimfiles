@@ -43,7 +43,7 @@ set shiftwidth=2               " default shift width for indents
 set expandtab                  " replace tabs with ${tabstop} spaces
 set smarttab                   "
 
-set backspace=indent 
+set backspace=indent
 set backspace+=eol
 set backspace+=start
 
@@ -106,23 +106,23 @@ map <silent> <F12> :set invlist<CR>
 " "}}}
 
 " Key mappings " {{{
-nnoremap <C-F> <C-U> " swap ^u  
+nnoremap <C-F> <C-U> " swap ^u
 nnoremap <C-U> <C-F> " with ^f : convenience!
 nnoremap <LocalLeader>rs :source ~/.vimrc<CR>
 nnoremap <LocalLeader>rt :tabnew ~/.vim/vimrc<CR>
 nnoremap <LocalLeader>re :e ~/.vim/vimrc<CR>
 nnoremap <LocalLeader>rd :e ~/.vim/ <CR>
 
-" Tabs 
+" Tabs
 nnoremap <LocalLeader>[ :tabprev<CR>
 nnoremap <LocalLeader>] :tabnext<CR>
-" Duplication 
+" Duplication
 vnoremap <LocalLeader>= yP
 nnoremap <LocalLeader>= YP
 " Buffers
 nnoremap <LocalLeader>- :bd<CR>
-" Split line(opposite to S-J joining line) 
-nnoremap <C-J> gEa<CR><ESC>ew 
+" Split line(opposite to S-J joining line)
+nnoremap <C-J> gEa<CR><ESC>ew
 
 " map <silent> <C-W>v :vnew<CR>
 " map <silent> <C-W>s :snew<CR>
@@ -145,7 +145,7 @@ vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
 "
 " generate HTML version current buffer using current color scheme
-map <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
+map <LocalLeader>2h :runtime! syntax/2html.vim<CR>
 
 ab #e # encoding: UTF-8
 " " }}}
@@ -169,8 +169,8 @@ call vundle#rc()
 " Bundle 'http://github.com/nelstrom/vim-mac-classic-theme.git'
 
 Bundle 'https://github.com/gmarik/ingretu.git'
-if has("gui_running") 
-  colorscheme ingretu 
+if has("gui_running")
+  colorscheme ingretu
 endif
 
 " Programming
@@ -222,9 +222,9 @@ vnoremap <leader># :<C-u>HlmGrepVSel<CR>
 
 " FuzzyFinder
 Bundle 'L9'
-Bundle 'FuzzyFinder'  
+Bundle 'FuzzyFinder'
 " FuF customisations "{{{
-let g:fuf_modesDisable = [] 
+let g:fuf_modesDisable = []
 nnoremap <LocalLeader>h :FufHelp<CR>
 nnoremap <LocalLeader>2  :FufFileWithCurrentBufferDir<CR>
 nnoremap <LocalLeader>@  :FufFile<CR>
@@ -234,9 +234,9 @@ nnoremap <LocalLeader>$  :FufDir<CR>
 nnoremap <LocalLeader>5  :FufChangeList<CR>
 nnoremap <LocalLeader>6  :FufMruFile<CR>
 nnoremap <LocalLeader>7  :FufLine<CR>
-nnoremap <LocalLeader>8  :FufBookmark<CR> 
+nnoremap <LocalLeader>8  :FufBookmark<CR>
 nnoremap <LocalLeader>*  :FuzzyFinderAddBookmark<CR><CR>
-nnoremap <LocalLeader>9  :FufTaggedFile<CR> 
+nnoremap <LocalLeader>9  :FufTaggedFile<CR>
 " " }}}
 
 " Command-T
@@ -250,7 +250,7 @@ Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
 set rtp+=~/.vim/grep.git/ " my dev version
 runtime plugin/grep.vim
 
-" trying this 
+" trying this
 Bundle 'neverland.vim--All-colorschemes-suck'
 Bundle 'unimpaired.vim'
 Bundle 'Gundo'
