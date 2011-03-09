@@ -22,6 +22,8 @@ set hidden                     " The current buffer can be put to the background
 set hlsearch                   " highlight search
 set smartcase                  " be case sensitive when input has a capital letter
 set incsearch                  " show matches while typing
+
+let g:is_posix = 1             " vim's default is archaic bourne shell, bring it up to the 90s
 " "}}}
 
 " Formatting "{{{
@@ -97,7 +99,7 @@ set splitbelow
 set splitright
 
 set list                      " display unprintable characters f12 - switches
-set listchars=tab:°\ ,eol:¬
+set listchars=tab:\ ·,eol:¬
 set listchars+=trail:·
 set listchars+=extends:»,precedes:«
 map <silent> <F12> :set invlist<CR>
@@ -127,7 +129,13 @@ nnoremap <C-J> gEa<CR><ESC>ew
 
 map <S-CR> A<CR><ESC>
 
-map <LocalLeader>E :Ex<CR>
+map <LocalLeader>E :Explore<CR>
+
+" Make Control-direction switch between windows (like C-W h, etc)
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
 
 "
 " Control+S and Control+Q are flow-control characters: disable them in your terminal settings.
@@ -138,6 +146,8 @@ inoremap <C-S> <C-O>:update<CR>
 "
 " generate HTML version current buffer using current color scheme
 map <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
+
+ab #e # encoding: UTF-8
 " " }}}
 
 " AutoCommands " {{{
@@ -150,7 +160,7 @@ au! BufWritePost      *.snippet                                       call Reloa
 " Scripts and Bundles " {{{
 runtime macros/matchit.vim
 
-set rtp+=~/.vim/bundle/vundle.git/
+set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
 " Colorscheme
@@ -241,12 +251,11 @@ set rtp+=~/.vim/grep.git/ " my dev version
 runtime plugin/grep.vim
 
 " trying this 
-Bundle 'https://github.com/int3/vim-extradite'
 Bundle 'unimpaired.vim'
+Bundle 'Gundo'
+Bundle 'https://github.com/int3/vim-extradite'
 Bundle 'http://github.com/thinca/vim-quickrun.git'
 Bundle 'http://github.com/thinca/vim-poslist.git'
 Bundle 'http://github.com/mattn/gist-vim.git'
 Bundle 'http://github.com/rstacruz/sparkup.git', {'rtp': 'vim/'}
-Bundle 'Conque-Shell'
-Bundle 'The-NERD-tree'
 " " }}}
