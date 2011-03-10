@@ -8,6 +8,7 @@ end
 if has('mac')
 set fullscreen
 set fuoptions=maxvert,maxhorz ",background:#00AAaaaa
+set macmeta
 
 set guifont=Andale\ Mono:h13
 set noantialias
