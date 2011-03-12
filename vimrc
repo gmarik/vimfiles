@@ -192,7 +192,7 @@ Bundle 'fugitive.vim'
 Bundle 'ragtag.vim'
 
 " Utility
-Bundle 'gmarik/sudo-write.git'
+Bundle 'gmarik/sudo-gui.vim'
 
 Bundle 'repeat.vim'
 Bundle 'surround.vim'
