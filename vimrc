@@ -166,9 +166,9 @@ call vundle#rc()
 " Colorscheme
 " Bundle 'molokai'
 " colorscheme molokai
-" Bundle 'gh:nelstrom/vim-mac-classic-theme.git'
+" Bundle 'nelstrom/vim-mac-classic-theme.git'
 
-Bundle 'gh:gmarik/ingretu.git'
+Bundle 'git@github.com:gmarik/ingretu.git'
 if has("gui_running")
   colorscheme ingretu
 endif
@@ -182,7 +182,7 @@ Bundle 'gh:gmarik/snipmate.vim.git'
 
 " Syntax highlight
 Bundle 'cucumber.zip'
-Bundle 'Markdown'
+Bundle 'git@github.com:gmarik/vim-markdown.git'
 
 " Git integration
 Bundle 'git.zip'
@@ -192,7 +192,7 @@ Bundle 'fugitive.vim'
 Bundle 'ragtag.vim'
 
 " Utility
-Bundle 'gh:gmarik/sudo-write.git'
+Bundle 'gmarik/sudo-write.git'
 
 Bundle 'repeat.vim'
 Bundle 'surround.vim'
@@ -214,7 +214,7 @@ Bundle 'tComment'
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
-Bundle 'gh:gmarik/hlmatch.vim.git'
+Bundle 'git@github.com:gmarik/hlmatch.vim.git'
 nnoremap # :<C-u>HlmCword<CR>
 nnoremap <leader># :<C-u>HlmGrepCword<CR>
 vnoremap # :<C-u>HlmVSel<CR>
@@ -240,7 +240,7 @@ nnoremap <LocalLeader>9  :FufTaggedFile<CR>
 " " }}}
 
 " Command-T
-Bundle 'gh:wincent/Command-T.git'
+Bundle 'wincent/Command-T.git'
 let g:CommandTMatchWindowAtTop=1 " show window at top
 
 " Misc stuff
@@ -254,9 +254,9 @@ runtime plugin/grep.vim
 Bundle 'neverland.vim--All-colorschemes-suck'
 Bundle 'unimpaired.vim'
 Bundle 'Gundo'
-Bundle 'gh:int3/vim-extradite'
-Bundle 'gh:thinca/vim-quickrun.git'
+Bundle 'int3/vim-extradite'
+Bundle 'thinca/vim-quickrun.git'
 Bundle 'gh:thinca/vim-poslist.git'
 Bundle 'github:mattn/gist-vim.git'
-Bundle 'gh:rstacruz/sparkup.git', {'rtp': 'vim/'}
+Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
 " " }}}
