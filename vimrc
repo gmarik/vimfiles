@@ -27,9 +27,6 @@ let g:is_posix = 1             " vim's default is archaic bourne shell, bring it
 " "}}}
 
 " Formatting "{{{
-syntax on                      " enable syntax
-filetype plugin indent on      " Automatically detect file types.
-
 set fo+=o                      " Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
 set fo-=r                      " Do not automatically insert a comment leader after an enter
 set fo-=t                      " Do no auto-wrap text using textwidth (does not apply to comments)
@@ -57,6 +54,8 @@ set cinwords+=for,switch,case
 " "}}}
 
 " Visual "{{{
+syntax on                      " enable syntax
+
 set nonumber                  " Line numbers off
 set showmatch                 " Show matching brackets.
 set matchtime=2               " Bracket blinking.
@@ -158,6 +157,7 @@ au! BufWritePost      *.snippet                                       call Reloa
 " " }}}
 
 " Scripts and Bundles " {{{
+filetype plugin indent on      " Automatically detect file types.
 runtime macros/matchit.vim
 
 set rtp+=~/.vim/vundle.git/
