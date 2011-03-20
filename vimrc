@@ -185,8 +185,8 @@ Bundle 'cucumber.zip'
 Bundle 'git@github.com:gmarik/vim-markdown.git'
 
 " Git integration
-Bundle 'git.zip'
-Bundle 'fugitive.vim'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-fugitive'
 
 " (HT|X)ml tool
 Bundle 'ragtag.vim'
