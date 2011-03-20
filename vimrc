@@ -164,9 +164,9 @@ set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
 " Colorscheme
-" Bundle 'molokai'
+Bundle 'molokai'
 " colorscheme molokai
-" Bundle 'nelstrom/vim-mac-classic-theme.git'
+Bundle 'nelstrom/vim-mac-classic-theme.git'
 
 Bundle 'git@github.com:gmarik/ingretu.git'
 if has("gui_running")
