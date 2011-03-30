@@ -27,9 +27,6 @@ let g:is_posix = 1             " vim's default is archaic bourne shell, bring it
 " "}}}
 
 " Formatting "{{{
-syntax on                      " enable syntax
-filetype plugin indent on      " Automatically detect file types.
-
 set fo+=o                      " Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
 set fo-=r                      " Do not automatically insert a comment leader after an enter
 set fo-=t                      " Do no auto-wrap text using textwidth (does not apply to comments)
@@ -57,6 +54,8 @@ set cinwords+=for,switch,case
 " "}}}
 
 " Visual "{{{
+syntax on                      " enable syntax
+
 set nonumber                  " Line numbers off
 set showmatch                 " Show matching brackets.
 set matchtime=2               " Bracket blinking.
@@ -158,6 +157,7 @@ au! BufWritePost      *.snippet                                       call Reloa
 " " }}}
 
 " Scripts and Bundles " {{{
+filetype plugin indent on      " Automatically detect file types.
 runtime macros/matchit.vim
 
 set rtp+=~/.vim/vundle.git/
@@ -167,7 +167,7 @@ call vundle#rc()
 Bundle 'molokai'
 Bundle 'nelstrom/vim-mac-classic-theme.git'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'gmarik/ingretu.git'
+Bundle 'git@github.com:gmarik/ingretu.git'
 
 if has("gui_running")
   colorscheme ingretu
@@ -182,17 +182,17 @@ Bundle 'gh:gmarik/snipmate.vim.git'
 
 " Syntax highlight
 Bundle 'cucumber.zip'
-Bundle 'Markdown'
+Bundle 'git@github.com:gmarik/vim-markdown.git'
 
 " Git integration
-Bundle 'git.zip'
-Bundle 'fugitive.vim'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-fugitive'
 
 " (HT|X)ml tool
 Bundle 'ragtag.vim'
 
 " Utility
-Bundle 'gh:gmarik/sudo-write.git'
+Bundle 'gmarik/sudo-gui.vim'
 
 Bundle 'repeat.vim'
 Bundle 'surround.vim'
@@ -214,7 +214,7 @@ Bundle 'tComment'
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
-Bundle 'gh:gmarik/hlmatch.vim.git'
+Bundle 'git@github.com:gmarik/hlmatch.vim.git'
 nnoremap # :<C-u>HlmCword<CR>
 nnoremap <leader># :<C-u>HlmGrepCword<CR>
 vnoremap # :<C-u>HlmVSel<CR>
@@ -240,7 +240,7 @@ nnoremap <LocalLeader>9  :FufTaggedFile<CR>
 " " }}}
 
 " Command-T
-Bundle 'gh:wincent/Command-T.git'
+Bundle 'wincent/Command-T.git'
 let g:CommandTMatchWindowAtTop=1 " show window at top
 
 " Misc stuff
@@ -254,9 +254,9 @@ runtime plugin/grep.vim
 Bundle 'neverland.vim--All-colorschemes-suck'
 Bundle 'unimpaired.vim'
 Bundle 'Gundo'
-Bundle 'gh:int3/vim-extradite'
-Bundle 'gh:thinca/vim-quickrun.git'
+Bundle 'int3/vim-extradite'
+Bundle 'thinca/vim-quickrun.git'
 Bundle 'gh:thinca/vim-poslist.git'
 Bundle 'github:mattn/gist-vim.git'
-Bundle 'gh:rstacruz/sparkup.git', {'rtp': 'vim/'}
+Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
 " " }}}
