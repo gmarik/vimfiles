@@ -24,6 +24,8 @@ set smartcase                  " be case sensitive when input has a capital lett
 set incsearch                  " show matches while typing
 
 let g:is_posix = 1             " vim's default is archaic bourne shell, bring it up to the 90s
+let mapleader = ','
+let maplocalleader = ','
 " "}}}
 
 " Formatting "{{{
@@ -114,8 +116,8 @@ nnoremap <LocalLeader>re :e ~/.vim/vimrc<CR>
 nnoremap <LocalLeader>rd :e ~/.vim/ <CR>
 
 " Tabs
-nnoremap <LocalLeader>[ :tabprev<CR>
-nnoremap <LocalLeader>] :tabnext<CR>
+nnoremap <LocalLeader>n :tabprev<CR>
+nnoremap <LocalLeader>m :tabnext<CR>
 " Duplication
 vnoremap <LocalLeader>= yP
 nnoremap <LocalLeader>= YP
