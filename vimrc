@@ -56,7 +56,8 @@ set cinwords+=for,switch,case
 " Visual "{{{
 syntax on                      " enable syntax
 
-set nonumber                  " Line numbers off
+set nonumber                  " line numbers Off
+set relativenumber            " relative ones On
 set showmatch                 " Show matching brackets.
 set matchtime=2               " Bracket blinking.
 
