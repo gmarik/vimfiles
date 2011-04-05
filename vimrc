@@ -126,6 +126,10 @@ endif
 " "}}}
 
 " Key mappings " {{{
+" Duplication
+nnoremap <Leader>c mz"dyy"dp`z
+vnoremap <Leader>c "dymz"dP`z
+
 nnoremap <C-F> <C-U> " swap ^u
 nnoremap <C-U> <C-F> " with ^f : convenience!
 nnoremap <LocalLeader>rs :source ~/.vimrc<CR>
@@ -136,9 +140,6 @@ nnoremap <LocalLeader>rd :e ~/.vim/ <CR>
 " Tabs
 nnoremap <LocalLeader>n :tabprev<CR>
 nnoremap <LocalLeader>m :tabnext<CR>
-" Duplication
-nnoremap <Leader>c mz"dyy"dp`z
-vnoremap <Leader>c "dymz"dP`z
 " Esc
 inoremap <Leader>, <Esc>
 
@@ -169,10 +170,6 @@ set macmeta
 
 " Copy whole line
 nnoremap <silent> <D-c> yy
-" Duplicate
-vnoremap <silent> <D-d> mz"dyy"dp`z
-nnoremap <silent> <D-d> mz"dyy"dp`z
-
 endif
 
 " Control+S and Control+Q are flow-control characters: disable them in your terminal settings.
