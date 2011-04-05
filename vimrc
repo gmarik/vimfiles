@@ -58,6 +58,9 @@ set cinwords+=for,switch,case
 " Visual "{{{
 syntax on                      " enable syntax
 
+set mouse=a "enable mouse in GUI mode
+set mousehide                 " Hide mouse after chars typed
+
 set nonumber                  " line numbers Off
 set relativenumber            " relative ones On
 set showmatch                 " Show matching brackets.
@@ -86,8 +89,6 @@ set stl+=[%{&ff}]             " show fileformat
 set stl+=%y%m%r%=
 set stl+=%-14.(%l,%c%V%)\ %P
 
-set mouse-=a                  " Disable mouse
-set mousehide                 " Hide mouse after chars typed
 
 set foldenable                " Turn on folding
 set foldmethod=marker         " Fold on the marker
@@ -105,6 +106,23 @@ set listchars=tab:\ ·,eol:¬
 set listchars+=trail:·
 set listchars+=extends:»,precedes:«
 map <silent> <F12> :set invlist<CR>
+
+if has('gui_running')
+  set guioptions=cMg " console dialogs, do not show menu and toolbar
+
+  " Fonts
+  if has('mac')
+  set guifont=Andale\ Mono:h13
+  else
+  set guifont=Terminus:h16
+  end
+
+  if has('mac')
+  set noantialias
+  " set fullscreen
+  " set fuoptions=maxvert,maxhorz ",background:#00AAaaaa
+  endif
+endif
 " "}}}
 
 " Key mappings " {{{
@@ -119,8 +137,11 @@ nnoremap <LocalLeader>rd :e ~/.vim/ <CR>
 nnoremap <LocalLeader>n :tabprev<CR>
 nnoremap <LocalLeader>m :tabnext<CR>
 " Duplication
-vnoremap <LocalLeader>= yP
-nnoremap <LocalLeader>= YP
+nnoremap <Leader>c mz"dyy"dp`z
+vnoremap <Leader>c "dymz"dP`z
+" Esc
+inoremap <Leader>, <Esc>
+
 " Buffers
 nnoremap <LocalLeader>- :bd<CR>
 " Split line(opposite to S-J joining line)
@@ -139,7 +160,21 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
-"
+if has('mac')
+
+set macmeta
+
+" map(range(1,9), 'exec "imap <D-".v:val."> <C-o>".v:val."gt"')
+" map(range(1,9), 'exec " map <D-".v:val."> ".v:val."gt"')
+
+" Copy whole line
+nnoremap <silent> <D-c> yy
+" Duplicate
+vnoremap <silent> <D-d> mz"dyy"dp`z
+nnoremap <silent> <D-d> mz"dyy"dp`z
+
+endif
+
 " Control+S and Control+Q are flow-control characters: disable them in your terminal settings.
 " $ stty -ixon -ixoff
 noremap <C-S> :update<CR>
