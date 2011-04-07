@@ -120,7 +120,7 @@ if has('gui_running')
   if has('mac')
   set noantialias
   " set fullscreen
-  " set fuoptions=maxvert,maxhorz ",background:#00AAaaaa
+  set fuoptions=maxvert,maxhorz ",background:#00AAaaaa
   endif
 endif
 " "}}}
