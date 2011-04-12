@@ -233,7 +233,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'ragtag.vim'
 
 " Utility
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'gmarik/sudo-gui.vim'
 
 Bundle 'repeat.vim'
