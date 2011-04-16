@@ -277,9 +277,15 @@ nnoremap <LocalLeader>$  :FufDir<CR>
 nnoremap <LocalLeader>5  :FufChangeList<CR>
 nnoremap <LocalLeader>6  :FufMruFile<CR>
 nnoremap <LocalLeader>7  :FufLine<CR>
-nnoremap <LocalLeader>8  :FufBookmark<CR>
-nnoremap <LocalLeader>*  :FuzzyFinderAddBookmark<CR><CR>
 nnoremap <LocalLeader>9  :FufTaggedFile<CR>
+
+nnoremap <LocalLeader>baf  :FufBookmarkFileAdd<CR>
+nnoremap <LocalLeader>bf  :FufBookmarkFile<CR>
+
+nnoremap <LocalLeader>bad  :FufBookmarkDirAdd<CR>
+nnoremap <LocalLeader>bd  :FufBookmarkDir<CR>
+
+
 " " }}}
 
 " Command-T
