@@ -235,9 +235,11 @@ Bundle 'ragtag.vim'
 
 " Utility
 Bundle 'gmarik/sudo-gui.vim'
+Bundle 'Gundo'
 
 Bundle 'repeat.vim'
 Bundle 'surround.vim'
+
 " Bundle 'SuperTab'
 Bundle 'file-line'
 Bundle 'Align'
@@ -299,9 +301,9 @@ set rtp+=~/.vim/grep.git/ " my dev version
 runtime plugin/grep.vim
 
 " trying this
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'neverland.vim--All-colorschemes-suck'
 Bundle 'unimpaired.vim'
-Bundle 'Gundo'
 Bundle 'int3/vim-extradite'
 Bundle 'thinca/vim-quickrun.git'
 Bundle 'gh:thinca/vim-poslist.git'
