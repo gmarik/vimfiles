@@ -200,9 +200,8 @@ au  WinLeave          *                                               set norela
 " " }}}
 
 " Scripts and Bundles " {{{
-filetype plugin indent on      " Automatically detect file types.
+filetype off
 runtime macros/matchit.vim
-
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
@@ -308,4 +307,6 @@ Bundle 'thinca/vim-quickrun.git'
 Bundle 'gh:thinca/vim-poslist.git'
 Bundle 'github:mattn/gist-vim.git'
 Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
+
+filetype plugin indent on      " Automatically detect file types.
 " " }}}
