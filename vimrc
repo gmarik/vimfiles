@@ -127,24 +127,24 @@ endif
 
 " Key mappings " {{{
 " Duplication
-nnoremap <Leader>c mz"dyy"dp`z
-vnoremap <Leader>c "dymz"dP`z
+nnoremap <leader>c mz"dyy"dp`z
+vnoremap <leader>c "dymz"dP`z
 
 nnoremap <C-F> <C-U> " swap ^u
 nnoremap <C-U> <C-F> " with ^f : convenience!
-nnoremap <LocalLeader>rs :source ~/.vimrc<CR>
-nnoremap <LocalLeader>rt :tabnew ~/.vim/vimrc<CR>
-nnoremap <LocalLeader>re :e ~/.vim/vimrc<CR>
-nnoremap <LocalLeader>rd :e ~/.vim/ <CR>
+nnoremap <leader>rs :source ~/.vimrc<CR>
+nnoremap <leader>rt :tabnew ~/.vim/vimrc<CR>
+nnoremap <leader>re :e ~/.vim/vimrc<CR>
+nnoremap <leader>rd :e ~/.vim/ <CR>
 
 " Tabs
-nnoremap <LocalLeader>n :tabprev<CR>
-nnoremap <LocalLeader>m :tabnext<CR>
+nnoremap <leader>n :tabprev<CR>
+nnoremap <leader>m :tabnext<CR>
 " Esc
-inoremap <Leader>, <Esc>
+inoremap <leader>, <Esc>
 
 " Buffers
-nnoremap <LocalLeader>- :bd<CR>
+nnoremap <leader>- :bd<CR>
 " Split line(opposite to S-J joining line)
 nnoremap <C-J> gEa<CR><ESC>ew
 
@@ -159,7 +159,7 @@ map <silent> <leader>< :let @+=expand('%:p:h')<CR>
 
 map <S-CR> A<CR><ESC>
 
-map <LocalLeader>E :Explore<CR>
+map <leader>E :Explore<CR>
 
 " Make Control-direction switch between windows (like C-W h, etc)
 nmap <silent> <C-k> :wincmd k<CR>
@@ -185,7 +185,7 @@ vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
 "
 " generate HTML version current buffer using current color scheme
-map <LocalLeader>2h :runtime! syntax/2html.vim<CR>
+map <leader>2h :runtime! syntax/2html.vim<CR>
 
 ab #e # encoding: UTF-8
 " " }}}
@@ -247,9 +247,9 @@ Bundle 'Indent-Guides'
 let g:indent_guides_guide_size = 1
 
 Bundle 'ZoomWin'
-noremap <LocalLeader>o :ZoomWin<CR>
-vnoremap <LocalLeader>o <C-C>:ZoomWin<CR>
-inoremap <LocalLeader>o <C-O>:ZoomWin<CR>
+noremap <leader>o :ZoomWin<CR>
+vnoremap <leader>o <C-C>:ZoomWin<CR>
+inoremap <leader>o <C-O>:ZoomWin<CR>
 
 Bundle 'tlib'
 Bundle 'tComment'
@@ -267,22 +267,22 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 " FuF customisations "{{{
 let g:fuf_modesDisable = []
-nnoremap <LocalLeader>h :FufHelp<CR>
-nnoremap <LocalLeader>2  :FufFileWithCurrentBufferDir<CR>
-nnoremap <LocalLeader>@  :FufFile<CR>
-nnoremap <LocalLeader>3  :FufBuffer<CR>
-nnoremap <LocalLeader>4  :FufDirWithCurrentBufferDir<CR>
-nnoremap <LocalLeader>$  :FufDir<CR>
-nnoremap <LocalLeader>5  :FufChangeList<CR>
-nnoremap <LocalLeader>6  :FufMruFile<CR>
-nnoremap <LocalLeader>7  :FufLine<CR>
-nnoremap <LocalLeader>9  :FufTaggedFile<CR>
+nnoremap <leader>h :FufHelp<CR>
+nnoremap <leader>2  :FufFileWithCurrentBufferDir<CR>
+nnoremap <leader>@  :FufFile<CR>
+nnoremap <leader>3  :FufBuffer<CR>
+nnoremap <leader>4  :FufDirWithCurrentBufferDir<CR>
+nnoremap <leader>$  :FufDir<CR>
+nnoremap <leader>5  :FufChangeList<CR>
+nnoremap <leader>6  :FufMruFile<CR>
+nnoremap <leader>7  :FufLine<CR>
+nnoremap <leader>9  :FufTaggedFile<CR>
 
-nnoremap <LocalLeader>baf  :FufBookmarkFileAdd<CR>
-nnoremap <LocalLeader>bf  :FufBookmarkFile<CR>
+nnoremap <leader>baf  :FufBookmarkFileAdd<CR>
+nnoremap <leader>bf  :FufBookmarkFile<CR>
 
-nnoremap <LocalLeader>bad  :FufBookmarkDirAdd<CR>
-nnoremap <LocalLeader>bd  :FufBookmarkDir<CR>
+nnoremap <leader>bad  :FufBookmarkDirAdd<CR>
+nnoremap <leader>bd  :FufBookmarkDir<CR>
 
 
 " " }}}
