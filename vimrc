@@ -67,13 +67,7 @@ set matchtime=2               " Bracket blinking.
 
 set wildmode=longest,list     " At command line, complete longest common string, then list alternatives.
 
-set completeopt=longest,menu  "
 set completeopt+=preview
-
-" http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
-inoremap <expr> <CR>  pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-snoremap <expr> <C-p> pumvisible() ? '<C-n>' : '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
 
 set novisualbell              " No blinking
 set noerrorbells              " No noise.
@@ -233,6 +227,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'ragtag.vim'
 
 " Utility
+Bundle 'gmarik/ide-popup.vim'
 Bundle 'gmarik/sudo-gui.vim'
 Bundle 'Gundo'
 
