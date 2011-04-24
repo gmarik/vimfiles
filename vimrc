@@ -237,6 +237,14 @@ Bundle 'ragtag.vim'
 Bundle 'gmarik/sudo-gui.vim'
 Bundle 'Gundo'
 
+Bundle 'unimpaired.vim'
+" bubble current line
+nmap <M-j> ]e
+nmap <M-k> [e
+" bubble visual selection lines
+vmap <M-j> ]egv
+vmap <M-k> [egv
+
 Bundle 'repeat.vim'
 Bundle 'surround.vim'
 
@@ -303,7 +311,7 @@ runtime plugin/grep.vim
 " trying this
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'neverland.vim--All-colorschemes-suck'
-Bundle 'unimpaired.vim'
+
 Bundle 'int3/vim-extradite'
 Bundle 'thinca/vim-quickrun.git'
 Bundle 'gh:thinca/vim-poslist.git'
