@@ -244,8 +244,9 @@ Bundle 'surround.vim'
 
 " Bundle 'SuperTab'
 Bundle 'file-line'
-Bundle 'Align'
 Bundle 'lastpos.vim'
+
+Bundle 'Align'
 
 Bundle 'Indent-Guides'
 let g:indent_guides_guide_size = 1
