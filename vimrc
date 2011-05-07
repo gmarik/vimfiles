@@ -299,8 +299,7 @@ let g:CommandTMatchWindowAtTop=1 " show window at top
 Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
 
 " my dev stuff
-set rtp+=~/.vim/grep.git/ " my dev version
-runtime plugin/grep.vim
+Bundle! '~/.vim/grep.git' 
 
 " trying this
 Bundle 'kchmck/vim-coffee-script'
