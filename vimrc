@@ -244,9 +244,8 @@ Bundle 'surround.vim'
 
 " Bundle 'SuperTab'
 Bundle 'file-line'
-Bundle 'lastpos.vim'
-
 Bundle 'Align'
+Bundle 'lastpos.vim'
 
 Bundle 'Indent-Guides'
 let g:indent_guides_guide_size = 1
@@ -306,6 +305,7 @@ runtime plugin/grep.vim
 " trying this
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'neverland.vim--All-colorschemes-suck'
+
 Bundle 'int3/vim-extradite'
 Bundle 'thinca/vim-quickrun.git'
 Bundle 'gh:thinca/vim-poslist.git'
