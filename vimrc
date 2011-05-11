@@ -198,6 +198,8 @@ runtime macros/matchit.vim
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
+
 " Colorscheme
 Bundle 'molokai'
 Bundle 'nelstrom/vim-mac-classic-theme.git'
