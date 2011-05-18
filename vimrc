@@ -248,6 +248,9 @@ Bundle 'file-line'
 Bundle 'Align'
 Bundle 'lastpos.vim'
 
+Bundle 'Lokaltog/vim-easymotion'
+let g:EasyMotion_leader_key='<LocalLeader>'
+
 Bundle 'Indent-Guides'
 let g:indent_guides_guide_size = 1
 
