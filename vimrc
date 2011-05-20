@@ -210,6 +210,7 @@ if has("gui_running")
 endif
 
 " Programming
+Bundle 'anzaika/go.vim'
 Bundle 'jQuery'
 Bundle 'rails.vim'
 
