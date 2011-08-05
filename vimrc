@@ -306,7 +306,8 @@ let g:CommandTMatchWindowAtTop=1 " show window at top
 Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
 
 " my dev stuff
-Bundle! '~/.vim/grep.git' 
+" Bundle! '~/.vim/grep.git', {'sync':'no'}
+Bundle '~/.vim/grep.git', {'sync':'no'}
 
 " trying this
 Bundle 'kchmck/vim-coffee-script'
