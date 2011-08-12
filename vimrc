@@ -16,6 +16,7 @@ set autoread
 set nobackup
 set nowritebackup
 set directory=/tmp//           " prepend(^=) $HOME/.tmp/ to default path; use full path as backup filename(//)
+set noswapfile                 "
 
 set hidden                     " The current buffer can be put to the background without writing to disk
 
