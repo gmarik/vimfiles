@@ -135,6 +135,7 @@ nnoremap <leader>n :tabprev<CR>
 nnoremap <leader>m :tabnext<CR>
 " Esc
 inoremap <leader>, <Esc>
+inoremap ;; <Esc>
 
 " Buffers
 nnoremap <leader>- :bd<CR>
