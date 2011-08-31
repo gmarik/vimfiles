@@ -291,12 +291,8 @@ nnoremap <leader>6  :FufMruFile<CR>
 nnoremap <leader>7  :FufLine<CR>
 nnoremap <leader>9  :FufTaggedFile<CR>
 
-nnoremap <leader>baf  :FufBookmarkFileAdd<CR>
-nnoremap <leader>bf  :FufBookmarkFile<CR>
-
-nnoremap <leader>bad  :FufBookmarkDirAdd<CR>
-nnoremap <leader>bd  :FufBookmarkDir<CR>
-
+nnoremap <leader>p :FufDir ~/src/<CR>
+nnoremap <leader>fr :FufDir ~/.rvm/rubies/<CR>
 
 " " }}}
 
