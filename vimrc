@@ -237,6 +237,10 @@ Bundle 'gmarik/ide-popup.vim'
 Bundle 'gmarik/sudo-gui.vim'
 Bundle 'Gundo'
 
+Bundle 'mkitt/browser-refresh.vim'
+com! ONRRB :au! BufWritePost <buffer> :RRB
+com! NORRB :au! BufWritePost <buffer>
+
 Bundle 'unimpaired.vim'
 " bubble current line
 nmap <M-j> ]e
