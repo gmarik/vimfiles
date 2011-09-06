@@ -132,8 +132,8 @@ nnoremap <leader>re :e ~/.vim/vimrc<CR>
 nnoremap <leader>rd :e ~/.vim/ <CR>
 
 " Tabs
-nnoremap <leader>n :tabprev<CR>
-nnoremap <leader>m :tabnext<CR>
+nnoremap <M-h> :tabprev<CR>
+nnoremap <M-l> :tabnext<CR>
 " Esc
 inoremap <leader>, <Esc>
 inoremap ;; <Esc>
