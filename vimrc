@@ -162,6 +162,11 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
+" vertical split with CommandT
+nnoremap <leader>v :exec ':vnew \| CommandT'<CR>
+" and without
+nnoremap <leader>V :vnew<CR>
+
 if has('mac')
 
 set macmeta
