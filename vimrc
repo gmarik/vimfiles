@@ -222,7 +222,7 @@ endif
 " Programming
 Bundle 'anzaika/go.vim'
 Bundle 'jQuery'
-Bundle 'rails.vim'
+Bundle 'tpope/vim-rails'
 
 " Snippets
 Bundle 'gh:gmarik/snipmate.vim.git'
