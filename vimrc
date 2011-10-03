@@ -195,6 +195,8 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=rub
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
 au! BufReadPost       {COMMIT_EDITMSG,*/COMMIT_EDITMSG}               set ft=gitcommit noml list| norm 1G
 au! BufWritePost      *.snippet                                       call ReloadAllSnippets()
+" open help in vertical split
+au BufWinEnter *.txt if &ft == 'help' | wincmd H | endif
 " " }}}
 
 " Scripts and Bundles " {{{
