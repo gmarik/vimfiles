@@ -239,6 +239,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'ragtag.vim'
 
 " Utility
+Bundle 'gmarik/github-search.vim'
 Bundle 'gmarik/ide-popup.vim'
 Bundle 'gmarik/sudo-gui.vim'
 Bundle 'Gundo'
