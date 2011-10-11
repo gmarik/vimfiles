@@ -220,7 +220,7 @@ endif
 " Programming
 Bundle 'anzaika/go.vim'
 Bundle 'jQuery'
-Bundle 'rails.vim'
+Bundle 'tpope/vim-rails'
 
 " Snippets
 Bundle 'gh:gmarik/snipmate.vim.git'
@@ -237,6 +237,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'ragtag.vim'
 
 " Utility
+Bundle 'gmarik/github-search.vim'
 Bundle 'gmarik/ide-popup.vim'
 Bundle 'gmarik/sudo-gui.vim'
 Bundle 'Gundo'
