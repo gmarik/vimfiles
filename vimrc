@@ -237,6 +237,11 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'ragtag.vim'
 
 " Utility
+Bundle 'michaeljsmith/vim-indent-object'
+
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+
 Bundle 'gmarik/github-search.vim'
 Bundle 'gmarik/ide-popup.vim'
 Bundle 'gmarik/sudo-gui.vim'
