@@ -223,7 +223,10 @@ Bundle 'jQuery'
 Bundle 'tpope/vim-rails'
 
 " Snippets
-Bundle 'gh:gmarik/snipmate.vim.git'
+Bundle 'msanders/snipmate.vim'
+Bundle 'honza/snipmate-snippets'
+"TODO: extact my stuff
+"Bundle 'gh:gmarik/snipmate.vim.git'
 
 " Syntax highlight
 Bundle 'cucumber.zip'
