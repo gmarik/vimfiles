@@ -139,7 +139,7 @@ inoremap <leader>, <Esc>
 inoremap ;; <Esc>
 
 " Buffers
-nnoremap <leader>- :bd<CR>
+nnoremap <localleader>- :bd<CR>
 " Split line(opposite to S-J joining line)
 nnoremap <C-J> gEa<CR><ESC>ew
 
