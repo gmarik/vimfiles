@@ -209,9 +209,9 @@ Bundle 'gmarik/vundle'
 
 " Colorscheme
 Bundle 'molokai'
-Bundle 'nelstrom/vim-mac-classic-theme.git'
+Bundle 'nelstrom/vim-mac-classic-theme'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'git@github.com:gmarik/ingretu.git'
+Bundle 'gmarik/ingretu'
 
 if has("gui_running")
   colorscheme ingretu
@@ -226,11 +226,11 @@ Bundle 'tpope/vim-rails'
 Bundle 'gmarik/snipmate.vim'
 Bundle 'honza/snipmate-snippets'
 "TODO: extact my stuff
-"Bundle 'gh:gmarik/snipmate.vim.git'
+"Bundle 'gh:gmarik/snipmate.vim'
 
 " Syntax highlight
 Bundle 'cucumber.zip'
-Bundle 'git@github.com:gmarik/vim-markdown.git'
+Bundle 'gmarik/vim-markdown'
 
 " Git integration
 Bundle 'tpope/vim-git'
@@ -286,7 +286,7 @@ Bundle 'tComment'
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
-Bundle 'git@github.com:gmarik/hlmatch.vim.git'
+Bundle 'gmarik/hlmatch.vim'
 nnoremap # :<C-u>HlmCword<CR>
 nnoremap <leader># :<C-u>HlmGrepCword<CR>
 vnoremap # :<C-u>HlmVSel<CR>
@@ -343,10 +343,10 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'neverland.vim--All-colorschemes-suck'
 
 Bundle 'int3/vim-extradite'
-Bundle 'thinca/vim-quickrun.git'
-Bundle 'gh:thinca/vim-poslist.git'
-Bundle 'github:mattn/gist-vim.git'
-Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
+Bundle 'thinca/vim-quickrun'
+Bundle 'thinca/vim-poslist'
+Bundle 'mattn/gist-vim'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'Shougo/unite.vim'
 call unite#custom_filters('file,buffer,file_rec', ['matcher_fuzzy', 'sorter_default', 'converter_default'])
 
