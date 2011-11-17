@@ -360,4 +360,5 @@ Bundle 'Shougo/unite.vim'
 call unite#custom_filters('file,buffer,file_rec', ['matcher_fuzzy', 'sorter_default', 'converter_default'])
 
 filetype plugin indent on      " Automatically detect file types.
+
 " " }}}
