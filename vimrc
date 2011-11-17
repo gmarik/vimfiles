@@ -238,6 +238,11 @@ Bundle 'git@github.com:gmarik/vim-markdown.git'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 
+noremap <leader>gw :Gwrite<CR>
+noremap <leader>gc :Gcommit -v<CR>
+noremap <leader>gs :Gstatus<CR>
+
+
 " (HT|X)ml tool
 Bundle 'ragtag.vim'
 
