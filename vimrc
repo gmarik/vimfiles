@@ -137,6 +137,8 @@ nnoremap <M-l> :tabnext<CR>
 " Esc
 inoremap <leader>, <Esc>
 inoremap ;; <Esc>
+inoremap <C-return> <Esc>
+inoremap <C-space> <Esc>
 
 " Buffers
 nnoremap <localleader>- :bd<CR>
