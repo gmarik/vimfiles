@@ -137,6 +137,8 @@ nnoremap <M-l> :tabnext<CR>
 " Esc
 inoremap <leader>, <Esc>
 inoremap ;; <Esc>
+inoremap <C-return> <Esc>
+inoremap <C-space> <Esc>
 
 " Buffers
 nnoremap <localleader>- :bd<CR>
@@ -235,6 +237,13 @@ Bundle 'gmarik/vim-markdown'
 " Git integration
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
+
+nnoremap <leader>W :Gwrite<CR>
+nnoremap <leader>C :Gcommit -v<CR>
+nnoremap <leader>S :Gstatus \| 7<CR>
+inoremap <leader>W <Esc><leader>W
+inoremap <leader>C <Esc><leader>C
+inoremap <leader>S <Esc><leader>S
 
 " (HT|X)ml tool
 Bundle 'ragtag.vim'
@@ -352,4 +361,5 @@ Bundle 'Shougo/unite.vim'
 call unite#custom_filters('file,buffer,file_rec', ['matcher_fuzzy', 'sorter_default', 'converter_default'])
 
 filetype plugin indent on      " Automatically detect file types.
+
 " " }}}
