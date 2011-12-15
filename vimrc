@@ -324,7 +324,7 @@ nnoremap <leader>7  :FufLine<CR>
 nnoremap <leader>9  :FufTaggedFile<CR>
 
 nnoremap <leader>p :FufDir ~/src/<CR>
-nnoremap <leader>gg :FufDir ~/.rvm/gems/<CR>
+nnoremap <leader>ge :FufDir ~/.rvm/gems/<CR>
 
 nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
 
