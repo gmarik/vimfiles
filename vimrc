@@ -151,12 +151,13 @@ nnoremap <C-J> gEa<CR><ESC>ew
 " copy filename 
 map <silent> <leader>. :let @+=expand('%').':'.line('.')<CR>
 " copy path
-map <silent> <leader>< :let @+=expand('%:p:h')<CR>
+map <silent> <leader>/ :let @+=expand('%:p:h')<CR>
 
 
 map <S-CR> A<CR><ESC>
 
 map <leader>E :Explore<CR>
+map <leader>EE :Vexplore!<CR><C-W>=
 
 " Make Control-direction switch between windows (like C-W h, etc)
 nmap <silent> <C-k> <C-W><C-k>
@@ -323,7 +324,9 @@ nnoremap <leader>7  :FufLine<CR>
 nnoremap <leader>9  :FufTaggedFile<CR>
 
 nnoremap <leader>p :FufDir ~/src/<CR>
-nnoremap <leader>fr :FufDir ~/.rvm/rubies/<CR>
+nnoremap <leader>gg :FufDir ~/.rvm/gems/<CR>
+
+nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
 
 " " }}}
 
@@ -353,12 +356,10 @@ Bundle 'neverland.vim--All-colorschemes-suck'
 
 " Bundle 'int3/vim-extradite'
 Bundle 'gregsexton/gitv'
-Bundle 'thinca/vim-quickrun'
-Bundle 'thinca/vim-poslist'
-Bundle 'mattn/gist-vim'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'Shougo/unite.vim'
-call unite#custom_filters('file,buffer,file_rec', ['matcher_fuzzy', 'sorter_default', 'converter_default'])
+Bundle 'thinca/vim-quickrun.git'
+Bundle 'gh:thinca/vim-poslist.git'
+Bundle 'github:mattn/gist-vim.git'
+Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
 
 filetype plugin indent on      " Automatically detect file types.
 
