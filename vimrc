@@ -334,14 +334,14 @@ nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
 Bundle 'wincent/Command-T.git'
 let g:CommandTMatchWindowAtTop=1 " show window at top
 "burke's
-nnoremap <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-nnoremap <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-nnoremap <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-nnoremap <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-nnoremap <leader>ga :CommandTFlush<cr>\|:CommandT app/assets<cr>
-nnoremap <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
-nnoremap <leader>gr :topleft :vsplit config/routes.rb<cr>
-nnoremap <leader>gg :topleft :vsplit Gemfile<cr>
+nnoremap <leader>tv :CommandTFlush<cr>\|:CommandT app/views<cr>
+nnoremap <leader>tc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+nnoremap <leader>tm :CommandTFlush<cr>\|:CommandT app/models<cr>
+nnoremap <leader>tl :CommandTFlush<cr>\|:CommandT lib<cr>
+nnoremap <leader>ta :CommandTFlush<cr>\|:CommandT app/assets<cr>
+nnoremap <leader>tp :CommandTFlush<cr>\|:CommandT public<cr>
+nnoremap <leader>tr :topleft :vsplit config/routes.rb<cr>
+nnoremap <leader>tg :topleft :vsplit Gemfile<cr>
 
 " Misc stuff
 Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
