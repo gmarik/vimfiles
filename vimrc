@@ -149,7 +149,7 @@ nnoremap <C-J> gEa<CR><ESC>ew
 " map <silent> <C-W>s :snew<CR>
 
 " copy filename 
-map <silent> <leader>. :let @+=expand('%').':'.line('.')<CR>
+map <silent> <leader>. :let @+=expand('%:p').':'.line('.')<CR>
 " copy path
 map <silent> <leader>/ :let @+=expand('%:p:h')<CR>
 
