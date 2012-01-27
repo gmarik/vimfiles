@@ -355,6 +355,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'neverland.vim--All-colorschemes-suck'
 
 " Bundle 'int3/vim-extradite'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'gregsexton/gitv'
 Bundle 'thinca/vim-quickrun.git'
 Bundle 'gh:thinca/vim-poslist.git'
