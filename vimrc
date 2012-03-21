@@ -27,6 +27,7 @@ set incsearch                  " show matches while typing
 
 let g:is_posix = 1             " vim's default is archaic bourne shell, bring it up to the 90s
 let mapleader = ','
+let maplocalleader = '	'
 " "}}}
 
 " Formatting "{{{
