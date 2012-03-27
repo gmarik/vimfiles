@@ -138,8 +138,8 @@ nnoremap <leader>rd :e ~/.vim/ <CR>
 nnoremap <M-h> :tabprev<CR>
 nnoremap <M-l> :tabnext<CR>
 " Esc
-inoremap <leader>, <Esc>
-inoremap ;; <Esc>
+inoremap <leader><leader> <Esc>
+inoremap <localleader><localleader> <Esc>
 inoremap <C-return> <Esc>
 inoremap <C-space> <Esc>
 
