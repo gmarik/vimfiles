@@ -145,6 +145,7 @@ inoremap <C-space> <Esc>
 
 " Buffers
 nnoremap <localleader>- :bd<CR>
+nnoremap <localleader>-- :bd!<CR>
 " Split line(opposite to S-J joining line)
 nnoremap <C-J> gEa<CR><ESC>ew
 
