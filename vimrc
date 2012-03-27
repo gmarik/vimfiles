@@ -60,7 +60,7 @@ set cinwords+=for,switch,case
 " Visual "{{{
 syntax on                      " enable syntax
 
-set synmaxcol=150              " limit syntax highlighting to 128 columns
+" set synmaxcol=250              " limit syntax highlighting to 128 columns
 
 set mouse=a "enable mouse in GUI mode
 set mousehide                 " Hide mouse after chars typed
