@@ -142,6 +142,7 @@ inoremap <leader><leader> <Esc>
 inoremap <localleader><localleader> <Esc>
 inoremap <C-return> <Esc>
 inoremap <C-space> <Esc>
+inoremap <Esc> <NOP>
 
 " Buffers
 nnoremap <localleader>- :bd<CR>
