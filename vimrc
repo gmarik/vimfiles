@@ -316,6 +316,7 @@ Bundle 'FuzzyFinder'
 " FuF customisations "{{{
 let g:fuf_modesDisable = []
 nnoremap <leader>h :FufHelp<CR>
+nnoremap <leader>1  :FufTag<CR>
 nnoremap <leader>2  :FufFileWithCurrentBufferDir<CR>
 nnoremap <leader>@  :FufFile<CR>
 nnoremap <leader>3  :FufBuffer<CR>
