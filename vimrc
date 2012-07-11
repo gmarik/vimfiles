@@ -237,6 +237,7 @@ Bundle 'honza/snipmate-snippets'
 " Syntax highlight
 Bundle 'cucumber.zip'
 Bundle 'gmarik/vim-markdown'
+Bundle 'timcharper/textile.vim'
 
 " Git integration
 Bundle 'tpope/vim-git'
