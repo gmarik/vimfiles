@@ -250,6 +250,14 @@ inoremap <leader>W <Esc><leader>W
 inoremap <leader>C <Esc><leader>C
 inoremap <leader>S <Esc><leader>S
 
+Bundle 'tpope/vim-unimpaired'
+" bubble current line
+nmap <M-j> ]e
+nmap <M-k> [e
+" bubble visual selection lines
+vmap <M-j> ]egv
+vmap <M-k> [egv
+
 " (HT|X)ml tool
 Bundle 'ragtag.vim'
 
@@ -268,13 +276,6 @@ Bundle 'mkitt/browser-refresh.vim'
 com! ONRRB :au! BufWritePost <buffer> :RRB
 com! NORRB :au! BufWritePost <buffer>
 
-Bundle 'unimpaired.vim'
-" bubble current line
-nmap <M-j> ]e
-nmap <M-k> [e
-" bubble visual selection lines
-vmap <M-j> ]egv
-vmap <M-k> [egv
 
 Bundle 'repeat.vim'
 Bundle 'surround.vim'
