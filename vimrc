@@ -368,6 +368,7 @@ Bundle '~/.vim/grep.git', {'sync':'no'}
 
 " trying this
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'jimenezrick/vimerl'
 Bundle 'neverland.vim--All-colorschemes-suck'
 
 " Bundle 'int3/vim-extradite'
