@@ -96,6 +96,8 @@ set foldopen=block,hor,tag    " what movements open folds
 set foldopen+=percent,mark
 set foldopen+=quickfix
 
+set virtualedit=block
+
 set splitbelow
 set splitright
 
