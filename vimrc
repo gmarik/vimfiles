@@ -22,6 +22,7 @@ set noswapfile                 "
 set hidden                     " The current buffer can be put to the background without writing to disk
 
 set hlsearch                   " highlight search
+set ignorecase                 " be case insensitive when searching
 set smartcase                  " be case sensitive when input has a capital letter
 set incsearch                  " show matches while typing
 
