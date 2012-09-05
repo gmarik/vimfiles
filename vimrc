@@ -266,6 +266,9 @@ Bundle 'ragtag.vim'
 
 " Utility
 Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'AndrewRadev/splitjoin.vim'
+nmap sj :SplitjoinJoin<cr>
+nmap sk :SplitjoinSplit<cr>
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
