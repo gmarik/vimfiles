@@ -343,7 +343,7 @@ nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
 " " }}}
 
 " Command-T
-Bundle 'wincent/Command-T.git'
+" Bundle 'wincent/Command-T.git'
 let g:CommandTMatchWindowAtTop=1 " show window at top
 "burke's
 nnoremap <leader>tv :CommandTFlush<cr>\|:CommandT app/views<cr>
@@ -354,6 +354,10 @@ nnoremap <leader>ta :CommandTFlush<cr>\|:CommandT app/assets<cr>
 nnoremap <leader>tp :CommandTFlush<cr>\|:CommandT public<cr>
 nnoremap <leader>tr :topleft :vsplit config/routes.rb<cr>
 nnoremap <leader>tg :topleft :vsplit Gemfile<cr>
+
+"
+Bundle 'kien/ctrlp.vim'
+let g:ctrlp_map = '<leader>t'
 
 " Misc stuff
 Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
