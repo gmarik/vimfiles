@@ -186,6 +186,9 @@ set macmeta
 
 " Copy whole line
 nnoremap <silent> <D-c> yy
+
+" close/delete buffer when closing window
+map <silent> <D-w> :bdelete<CR>
 endif
 
 " Control+S and Control+Q are flow-control characters: disable them in your terminal settings.
@@ -202,7 +205,8 @@ ab #e # encoding: UTF-8
 
 " AutoCommands " {{{
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
-au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
+au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         setf markdown
+au BufRead,BufNewFile {*.scala}                                       setf scala
 au! BufReadPost       {COMMIT_EDITMSG,*/COMMIT_EDITMSG}               set ft=gitcommit noml list| norm 1G
 au! BufWritePost      *.snippet                                       call ReloadAllSnippets()
 " open help in vertical split
@@ -228,6 +232,7 @@ if has("gui_running")
 endif
 
 " Programming
+Bundle 'vim-scala'
 Bundle 'anzaika/go.vim'
 Bundle 'jQuery'
 Bundle 'tpope/vim-rails'
