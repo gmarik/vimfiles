@@ -111,6 +111,7 @@ if has('gui_running')
   set guioptions=cMg " console dialogs, do not show menu and toolbar
 
   " Fonts
+  " :set guifont=* " to launch a GUI dialog
   if has('mac')
   set guifont=Andale\ Mono:h13
   else
@@ -156,8 +157,8 @@ nnoremap <C-J> gEa<CR><ESC>ew
 
 " copy filename 
 map <silent> <leader>. :let @+=expand('%:p').':'.line('.')<CR>
-" copy path
 map <silent> <leader>/ :let @+=expand('%:p:h')<CR>
+" copy path
 
 
 map <S-CR> A<CR><ESC>
