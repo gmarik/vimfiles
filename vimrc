@@ -332,15 +332,18 @@ Bundle 'FuzzyFinder'
 " FuF customisations "{{{
 let g:fuf_modesDisable = []
 nnoremap <leader>h :FufHelp<CR>
-nnoremap <leader>1  :FufTag<CR>
+nnoremap <leader>1  :FufTagWithCursorWord<CR>
+nnoremap <leader>11 :FufTag<CR>
 nnoremap <leader>2  :FufFileWithCurrentBufferDir<CR>
-nnoremap <leader>@  :FufFile<CR>
+nnoremap <leader>22 :FufFile<CR>
 nnoremap <leader>3  :FufBuffer<CR>
 nnoremap <leader>4  :FufDirWithCurrentBufferDir<CR>
-nnoremap <leader>$  :FufDir<CR>
-nnoremap <leader>5  :FufChangeList<CR>
+nnoremap <leader>44 :FufDir<CR>
+nnoremap <leader>5  :FufBufferTag<CR>
+nnoremap <leader>55 :FufBufferTagAll<CR>
 nnoremap <leader>6  :FufMruFile<CR>
 nnoremap <leader>7  :FufLine<CR>
+nnoremap <leader>8  :FufChangeList<CR>
 nnoremap <leader>9  :FufTaggedFile<CR>
 
 nnoremap <leader>p :FufDir ~/src/<CR>
