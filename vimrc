@@ -369,6 +369,10 @@ nnoremap <leader>tg :topleft :vsplit Gemfile<cr>
 "
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_map = '<leader>t'
+let g:ctrlp_match_window_bottom=1
+let g:ctrlp_max_height = 20
+let g:ctrlp_match_window_reversed = 1
+let g:ctrlp_switch_buffer = 'e'
 
 " Misc stuff
 Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
