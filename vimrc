@@ -6,9 +6,9 @@ set timeoutlen=250             " Time to wait after ESC (default causes an annoy
 set clipboard+=unnamed         " Yanks go on clipboard instead.
 set pastetoggle=<F10>          " toggle between paste and normal: for 'safer' pasting from keyboard
 set shiftround                 " round indent to multiple of 'shiftwidth'
-set tags=./tags                " walk directory tree upto $HOME looking for tags
-set tags+=./git/
-set tags+=$HOME/
+set tags=.git/tags;$HOME       " consider the repo tags first, then
+                               " walk directory tree upto $HOME looking for tags
+                               " note `;` sets the stop folder. :h file-search
 
 set modeline
 set modelines=5                " default numbers of lines to read for modeline instructions
