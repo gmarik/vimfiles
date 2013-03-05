@@ -111,6 +111,7 @@ if has('gui_running')
   set guioptions=cMg " console dialogs, do not show menu and toolbar
 
   " Fonts
+  " :set guifont=* " to launch a GUI dialog
   if has('mac')
   set guifont=Andale\ Mono:h13
   else
