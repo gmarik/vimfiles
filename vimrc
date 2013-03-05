@@ -181,7 +181,9 @@ nnoremap <leader>V :vnew<CR>
 
 if has('mac')
 
-set macmeta
+  if has('gui_running')
+    set macmeta
+  end
 
 " map(range(1,9), 'exec "imap <D-".v:val."> <C-o>".v:val."gt"')
 " map(range(1,9), 'exec " map <D-".v:val."> ".v:val."gt"')
