@@ -190,6 +190,9 @@ set macmeta
 
 " Copy whole line
 nnoremap <silent> <D-c> yy
+
+" close/delete buffer when closing window
+map <silent> <D-w> :bdelete<CR>
 endif
 
 " Control+S and Control+Q are flow-control characters: disable them in your terminal settings.
