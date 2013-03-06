@@ -174,6 +174,10 @@ nmap <silent> <C-j> <C-W><C-j>
 nmap <silent> <C-h> <C-W><C-h>
 nmap <silent> <C-l> <C-W><C-l>
 
+" vertical paragraph-movement
+nmap <C-J> <{>
+nmap <C-K> <}>
+
 " vertical split with CommandT
 nnoremap <leader>v :exec ':vnew \| CommandT'<CR>
 " and without
@@ -357,24 +361,32 @@ nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
 
 " Command-T
 " Bundle 'wincent/Command-T.git'
-let g:CommandTMatchWindowAtTop=1 " show window at top
-"burke's
-nnoremap <leader>tv :CommandTFlush<cr>\|:CommandT app/views<cr>
-nnoremap <leader>tc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-nnoremap <leader>tm :CommandTFlush<cr>\|:CommandT app/models<cr>
-nnoremap <leader>tl :CommandTFlush<cr>\|:CommandT lib<cr>
-nnoremap <leader>ta :CommandTFlush<cr>\|:CommandT app/assets<cr>
-nnoremap <leader>tp :CommandTFlush<cr>\|:CommandT public<cr>
-nnoremap <leader>tr :topleft :vsplit config/routes.rb<cr>
-nnoremap <leader>tg :topleft :vsplit Gemfile<cr>
+" let g:CommandTMatchWindowAtTop=1 " show window at top
+" nnoremap <leader>tv :CommandTFlush<cr>\|:CommandT app/views<cr>
+" nnoremap <leader>tc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+" nnoremap <leader>tm :CommandTFlush<cr>\|:CommandT app/models<cr>
+" nnoremap <leader>tl :CommandTFlush<cr>\|:CommandT lib<cr>
+" nnoremap <leader>ta :CommandTFlush<cr>\|:CommandT app/assets<cr>
+" nnoremap <leader>tp :CommandTFlush<cr>\|:CommandT public<cr>
+" nnoremap <leader>tr :topleft :vsplit config/routes.rb<cr>
+" nnoremap <leader>tg :topleft :vsplit Gemfile<cr>
 
 "
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_map = '<leader>t'
+let g:ctrlp_max_height = 30
 let g:ctrlp_match_window_bottom=1
 let g:ctrlp_max_height = 20
 let g:ctrlp_match_window_reversed = 1
 let g:ctrlp_switch_buffer = 'e'
+nnoremap <leader>ev :CtrlP app/views<cr>
+nnoremap <leader>ec :CtrlP app/controllers<cr>
+nnoremap <leader>em :CtrlP app/models<cr>
+nnoremap <leader>el :CtrlP lib<cr>
+nnoremap <leader>ea :CtrlP app/assets<cr>
+nnoremap <leader>ep :CtrlP public<cr>
+nnoremap <leader>er :topleft :vsplit config/routes.rb<cr>
+nnoremap <leader>eg :topleft :vsplit Gemfile<cr>
 
 " Misc stuff
 Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
