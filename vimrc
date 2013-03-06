@@ -6,7 +6,9 @@ set timeoutlen=250             " Time to wait after ESC (default causes an annoy
 set clipboard+=unnamed         " Yanks go on clipboard instead.
 set pastetoggle=<F10>          " toggle between paste and normal: for 'safer' pasting from keyboard
 set shiftround                 " round indent to multiple of 'shiftwidth'
-set tags=./tags;$HOME          " walk directory tree upto $HOME looking for tags
+set tags=.git/tags;$HOME       " consider the repo tags first, then
+                               " walk directory tree upto $HOME looking for tags
+                               " note `;` sets the stop folder. :h file-search
 
 set modeline
 set modelines=5                " default numbers of lines to read for modeline instructions
@@ -157,8 +159,8 @@ nnoremap <C-J> gEa<CR><ESC>ew
 
 " copy filename 
 map <silent> <leader>. :let @+=expand('%:p').':'.line('.')<CR>
-" copy path
 map <silent> <leader>/ :let @+=expand('%:p:h')<CR>
+" copy path
 
 
 map <S-CR> A<CR><ESC>
@@ -334,15 +336,18 @@ Bundle 'FuzzyFinder'
 " FuF customisations "{{{
 let g:fuf_modesDisable = []
 nnoremap <leader>h :FufHelp<CR>
-nnoremap <leader>1  :FufTag<CR>
+nnoremap <leader>1  :FufTagWithCursorWord<CR>
+nnoremap <leader>11 :FufTag<CR>
 nnoremap <leader>2  :FufFileWithCurrentBufferDir<CR>
-nnoremap <leader>@  :FufFile<CR>
+nnoremap <leader>22 :FufFile<CR>
 nnoremap <leader>3  :FufBuffer<CR>
 nnoremap <leader>4  :FufDirWithCurrentBufferDir<CR>
-nnoremap <leader>$  :FufDir<CR>
-nnoremap <leader>5  :FufChangeList<CR>
+nnoremap <leader>44 :FufDir<CR>
+nnoremap <leader>5  :FufBufferTag<CR>
+nnoremap <leader>55 :FufBufferTagAll<CR>
 nnoremap <leader>6  :FufMruFile<CR>
 nnoremap <leader>7  :FufLine<CR>
+nnoremap <leader>8  :FufChangeList<CR>
 nnoremap <leader>9  :FufTaggedFile<CR>
 
 nnoremap <leader>p :FufDir ~/src/<CR>
@@ -368,6 +373,10 @@ nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_max_height = 30
+let g:ctrlp_match_window_bottom=1
+let g:ctrlp_max_height = 20
+let g:ctrlp_match_window_reversed = 1
+let g:ctrlp_switch_buffer = 'e'
 nnoremap <leader>ev :CtrlP app/views<cr>
 nnoremap <leader>ec :CtrlP app/controllers<cr>
 nnoremap <leader>em :CtrlP app/models<cr>
