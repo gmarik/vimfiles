@@ -396,6 +396,8 @@ Bundle 'thinca/vim-quickrun.git'
 Bundle 'gh:thinca/vim-poslist.git'
 Bundle 'github:mattn/gist-vim.git'
 Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
+let g:sparkupExecuteMapping = '<c-e>'
+let g:sparkupNextMapping = '<c-ee>'
 
 filetype plugin indent on      " Automatically detect file types.
 
