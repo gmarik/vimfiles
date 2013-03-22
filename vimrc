@@ -174,9 +174,9 @@ nmap <silent> <C-j> <C-W><C-j>
 nmap <silent> <C-h> <C-W><C-h>
 nmap <silent> <C-l> <C-W><C-l>
 
-" vertical paragraph-movement
-nmap <C-J> <{>
-nmap <C-K> <}>
+  " vertical paragraph-movement
+nmap <C-J> {
+nmap <C-K> }
 
 " vertical split with CommandT
 nnoremap <leader>v :exec ':vnew \| CommandT'<CR>
