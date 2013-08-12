@@ -247,7 +247,7 @@ Bundle 'tpope/vim-rails'
 
 " Snippets
 Bundle 'gmarik/snipmate.vim'
-Bundle 'honza/snipmate-snippets'
+Bundle 'honza/vim-snippets'
 "TODO: extact my stuff
 "Bundle 'gh:gmarik/snipmate.vim'
 
