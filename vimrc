@@ -241,7 +241,10 @@ endif
 
 " Programming
 Bundle 'vim-scala'
+
 Bundle 'anzaika/go.vim'
+Bundle 'Blackrush/vim-gocode'
+
 Bundle 'jQuery'
 Bundle 'tpope/vim-rails'
 
