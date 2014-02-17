@@ -307,7 +307,7 @@ Bundle 'repeat.vim'
 Bundle 'surround.vim'
 
 " Bundle 'SuperTab'
-Bundle 'file-line'
+Bundle 'bogado/file-line'
 Bundle 'Align'
 Bundle 'lastpos.vim'
 
