@@ -216,7 +216,8 @@ iab #v # vim: set ft=sh:
 " " }}}
 
 " AutoCommands " {{{
-au BufRead,BufNewFile {*.go}                                          setl tabstop=2 softtabstop=2 noexpandtab smarttab
+au BufRead,BufNewFile {*.go}                                          setl ft=go tabstop=2 softtabstop=2 noexpandtab smarttab
+" autocmd FileType go compiler go
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     setl ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         setl ft=markdown
 au BufRead,BufNewFile {*.scala}                                       setl ft=scala
