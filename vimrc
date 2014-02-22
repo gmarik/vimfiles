@@ -223,7 +223,7 @@ au BufRead,BufNewFile {*.scala}                                       setl ft=sc
 au! BufReadPost       {COMMIT_EDITMSG,*/COMMIT_EDITMSG}               setl ft=gitcommit noml list| norm 1G
 au! BufWritePost      *.snippet                                       call ReloadAllSnippets()
 " open help in vertical split
-au BufWinEnter *.txt if &ft == 'help' | wincmd H | endif
+au BufWinEnter *.txt if &ft == 'help' | wincmd H | nmap q :q<CR> | endif
 " " }}}
 
 " Scripts and Bundles " {{{
