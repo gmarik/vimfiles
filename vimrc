@@ -134,8 +134,6 @@ endif
 nnoremap <leader>c mz"dyy"dp`z
 vnoremap <leader>c "dymz"dP`z
 
-nnoremap <C-F> <C-U> " swap ^u
-nnoremap <C-U> <C-F> " with ^f : convenience!
 nnoremap <leader>rs :source ~/.vimrc<CR>
 nnoremap <leader>rt :tabnew ~/.vim/vimrc<CR>
 nnoremap <leader>re :e ~/.vim/vimrc<CR>
