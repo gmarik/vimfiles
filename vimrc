@@ -207,7 +207,9 @@ inoremap <C-S> <C-O>:update<CR>
 " generate HTML version current buffer using current color scheme
 map <leader>2h :runtime! syntax/2html.vim<CR>
 
-ab #e # encoding: UTF-8
+iab #e # encoding: UTF-8
+iab #v # vim: set ft=sh:
+
 " " }}}
 
 " AutoCommands " {{{
