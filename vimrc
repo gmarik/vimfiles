@@ -310,7 +310,7 @@ Bundle 'surround.vim'
 
 " Bundle 'SuperTab'
 Bundle 'bogado/file-line'
-Bundle 'Align'
+Bundle 'junegunn/vim-easy-align'
 Bundle 'lastpos.vim'
 
 Bundle 'Lokaltog/vim-easymotion'
