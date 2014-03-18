@@ -247,7 +247,6 @@ if has("gui_running")
 endif
 
 " Programming
-Bundle 'jnwhiteh/vim-golang'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'jQuery'
