@@ -257,6 +257,9 @@ Bundle 'gmarik/snipmate.vim'
 Bundle 'honza/vim-snippets'
 "TODO: extact my stuff
 "Bundle 'gh:gmarik/snipmate.vim'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
+
 
 " Syntax highlight
 Bundle 'cucumber.zip'
