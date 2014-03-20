@@ -277,6 +277,8 @@ inoremap <leader>W <Esc><leader>W
 inoremap <leader>C <Esc><leader>C
 inoremap <leader>S <Esc><leader>S
 
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 " bubble current line
 nmap <M-j> ]e
@@ -306,9 +308,6 @@ Bundle 'mkitt/browser-refresh.vim'
 com! ONRRB :au! BufWritePost <buffer> :RRB
 com! NORRB :au! BufWritePost <buffer>
 
-
-Bundle 'repeat.vim'
-Bundle 'surround.vim'
 
 " Bundle 'SuperTab'
 Bundle 'bogado/file-line'
