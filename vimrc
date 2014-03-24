@@ -229,47 +229,47 @@ au! BufWritePost      *.snippet                                       call Reloa
 au BufWinEnter *.txt if &ft == 'help' | wincmd H | nmap q :q<CR> | endif
 " " }}}
 
-" Scripts and Bundles " {{{
+" Scripts and Plugins " {{{
 filetype off
 runtime macros/matchit.vim
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle' " let Vundle manage Vundle
 
 " Colorscheme
-Bundle 'molokai'
-Bundle 'nelstrom/vim-mac-classic-theme'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'gmarik/ingretu'
+Plugin 'molokai'
+Plugin 'nelstrom/vim-mac-classic-theme'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'gmarik/ingretu'
 
 if has("gui_running")
   colorscheme ingretu
 endif
 
 " Programming
-Bundle 'Blackrush/vim-gocode'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'jQuery'
-Bundle 'tpope/vim-rails'
+Plugin 'Blackrush/vim-gocode'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'jQuery'
+Plugin 'tpope/vim-rails'
 
 " Snippets
-Bundle 'gmarik/snipmate.vim'
-Bundle 'honza/vim-snippets'
+Plugin 'gmarik/snipmate.vim'
+Plugin 'honza/vim-snippets'
 "TODO: extact my stuff
-"Bundle 'gh:gmarik/snipmate.vim'
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
+"Plugin 'gh:gmarik/snipmate.vim'
+Plugin 'rizzatti/funcoo.vim'
+Plugin 'rizzatti/dash.vim'
 
 
 " Syntax highlight
-Bundle 'cucumber.zip'
-Bundle 'gmarik/vim-markdown'
-Bundle 'timcharper/textile.vim'
+Plugin 'cucumber.zip'
+Plugin 'gmarik/vim-markdown'
+Plugin 'timcharper/textile.vim'
 
 " Git integration
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-fugitive'
 
 nnoremap <leader>W :Gwrite<CR>
 nnoremap <leader>C :Gcommit -v<CR>
@@ -278,9 +278,10 @@ inoremap <leader>W <Esc><leader>W
 inoremap <leader>C <Esc><leader>C
 inoremap <leader>S <Esc><leader>S
 
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+
 " bubble current line
 nmap <M-j> ]e
 nmap <M-k> [e
@@ -289,51 +290,52 @@ vmap <M-j> ]egv
 vmap <M-k> [egv
 
 " (HT|X)ml tool
-Bundle 'ragtag.vim'
+Plugin 'ragtag.vim'
 
 " Utility
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'AndrewRadev/splitjoin.vim'
+Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'AndrewRadev/splitjoin.vim'
 nmap sj :SplitjoinJoin<cr>
 nmap sk :SplitjoinSplit<cr>
 
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
 
-Bundle 'gmarik/github-search.vim'
-Bundle 'gmarik/ide-popup.vim'
-Bundle 'gmarik/sudo-gui.vim'
-Bundle 'Gundo'
+Plugin 'gmarik/github-search.vim'
+Plugin 'gmarik/ide-popup.vim'
+Plugin 'gmarik/sudo-gui.vim'
+Plugin 'Gundo'
 
-Bundle 'mkitt/browser-refresh.vim'
+Plugin 'mkitt/browser-refresh.vim'
 com! ONRRB :au! BufWritePost <buffer> :RRB
 com! NORRB :au! BufWritePost <buffer>
 
 
-" Bundle 'SuperTab'
-Bundle 'bogado/file-line'
-Bundle 'junegunn/vim-easy-align'
-vnoremap <silent> <Enter> :EasyAlign<cr>
+Plugin 'repeat.vim'
+Plugin 'surround.vim'
 
-Bundle 'lastpos.vim'
+" Plugin 'SuperTab'
+Plugin 'bogado/file-line'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'lastpos.vim'
 
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 let g:EasyMotion_leader_key='<LocalLeader>'
 
-Bundle 'Indent-Guides'
+Plugin 'Indent-Guides'
 let g:indent_guides_guide_size = 1
 
-Bundle 'ZoomWin'
+Plugin 'ZoomWin'
 noremap <leader>o :ZoomWin<CR>
 vnoremap <leader>o <C-C>:ZoomWin<CR>
 inoremap <leader>o <C-O>:ZoomWin<CR>
 
-Bundle 'tlib'
-Bundle 'tComment'
+Plugin 'tlib'
+Plugin 'tComment'
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
-Bundle 'gmarik/hlmatch.vim'
+Plugin 'gmarik/hlmatch.vim'
 nnoremap # :<C-u>HlmCword<CR>
 nnoremap <leader># :<C-u>HlmGrepCword<CR>
 vnoremap # :<C-u>HlmVSel<CR>
@@ -345,8 +347,8 @@ vnoremap ## :<C-u>HlmPartVSel<CR>
 vnoremap <leader>## :<C-u>HlmPartGrepVSel<CR>
 
 " FuzzyFinder
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
 " FuF customisations "{{{
 let g:fuf_modesDisable = []
 nnoremap <leader>h :FufHelp<CR>
@@ -372,7 +374,7 @@ nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
 " " }}}
 
 " Command-T
-" Bundle 'wincent/Command-T.git'
+" Plugin 'wincent/Command-T.git'
 " let g:CommandTMatchWindowAtTop=1 " show window at top
 " nnoremap <leader>tv :CommandTFlush<cr>\|:CommandT app/views<cr>
 " nnoremap <leader>tc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
@@ -384,7 +386,7 @@ nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
 " nnoremap <leader>tg :topleft :vsplit Gemfile<cr>
 
 "
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_max_height = 30
 let g:ctrlp_match_window_bottom=1
@@ -401,20 +403,20 @@ nnoremap <leader>er :topleft :vsplit config/routes.rb<cr>
 nnoremap <leader>eg :topleft :vsplit Gemfile<cr>
 
 " Misc stuff
-Bundle '~/Dropbox/.gitrepos/utilz.vim.git'
+Plugin '~/Dropbox/.gitrepos/utilz.vim.git'
 
 " my dev stuff
-" Bundle! '~/.vim/grep.git', {'sync':'no'}
-Bundle '~/.vim/grep.git', {'sync':'no'}
+" Plugin! '~/.vim/grep.git', {'sync':'no'}
+Plugin '~/.vim/grep.git', {'sync':'no'}
 
 " trying this
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'jimenezrick/vimerl'
-Bundle 'neverland.vim--All-colorschemes-suck'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'jimenezrick/vimerl'
+Plugin 'neverland.vim--All-colorschemes-suck'
 
-" Bundle 'int3/vim-extradite'
-" Bundle 'Lokaltog/vim-powerline'
-Bundle 'bling/vim-airline'
+" Plugin 'int3/vim-extradite'
+" Plugin 'Lokaltog/vim-powerline'
+Plugin 'bling/vim-airline'
 let g:airline_section_a = airline#section#create(['%<', 'file', 'readonly'])
 let g:airline_section_b = '' " airline#section#create_left(['mode', 'paste', 'iminsert'])
 let g:airline_section_c = '' " airline#section#create(['hunks'])
@@ -424,11 +426,11 @@ let g:airline_section_x = '' " airline#section#create_right(['filetype'])
 let g:airline_section_z = airline#section#create(['%(%l,%c%V%) %P'])
 let g:airline_section_warning = '' "airline#section#create(['whitespace'])
 
-Bundle 'gregsexton/gitv'
-Bundle 'thinca/vim-quickrun.git'
-Bundle 'gh:thinca/vim-poslist.git'
-Bundle 'github:mattn/gist-vim.git'
-Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
+Plugin 'gregsexton/gitv'
+Plugin 'thinca/vim-quickrun.git'
+Plugin 'gh:thinca/vim-poslist.git'
+Plugin 'github:mattn/gist-vim.git'
+Plugin 'rstacruz/sparkup.git', {'rtp': 'vim/'}
 let g:sparkupExecuteMapping = '<c-e>'
 let g:sparkupNextMapping = '<c-ee>'
 
