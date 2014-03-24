@@ -313,6 +313,8 @@ com! NORRB :au! BufWritePost <buffer>
 " Bundle 'SuperTab'
 Bundle 'bogado/file-line'
 Bundle 'junegunn/vim-easy-align'
+vnoremap <silent> <Enter> :EasyAlign<cr>
+
 Bundle 'lastpos.vim'
 
 Bundle 'Lokaltog/vim-easymotion'
