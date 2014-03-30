@@ -248,7 +248,8 @@ if has("gui_running")
 endif
 
 " Programming
-Plugin 'Blackrush/vim-gocode'
+" Plugin 'Blackrush/vim-gocode'
+Plugin 'fatih/vim-go'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'jQuery'
 Plugin 'tpope/vim-rails'
