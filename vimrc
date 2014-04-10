@@ -146,10 +146,6 @@ nnoremap <leader>rc :silent ! cd ~/.vim/ && git commit ~/.vim/vimrc -v <CR>
 " Tabs
 nnoremap <M-h> :tabprev<CR>
 nnoremap <M-l> :tabnext<CR>
-" Esc
-noremap <leader><leader> <Esc>
-noremap <localleader><space> <Esc>
-noremap <Esc> <NOP>
 
 " Buffers
 nnoremap <localleader>- :bd<CR>
