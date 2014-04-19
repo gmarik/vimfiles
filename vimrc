@@ -256,9 +256,8 @@ Plugin 'tpope/vim-rails'
 
 " Snippets
 Plugin 'gmarik/snipmate.vim'
-Plugin 'honza/vim-snippets'
-"TODO: extact my stuff
-"Plugin 'gh:gmarik/snipmate.vim'
+Plugin 'gmarik/snipmate.snippets'
+
 Plugin 'rizzatti/funcoo.vim'
 Plugin 'rizzatti/dash.vim'
 
