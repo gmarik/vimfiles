@@ -234,9 +234,6 @@ call vundle#rc()
 Plugin 'gmarik/vundle' " let Vundle manage Vundle
 
 " Colorscheme
-Plugin 'molokai'
-Plugin 'nelstrom/vim-mac-classic-theme'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'gmarik/ingretu'
 
 if has("gui_running")
@@ -247,19 +244,18 @@ endif
 " Plugin 'Blackrush/vim-gocode'
 Plugin 'fatih/vim-go'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'jQuery'
 Plugin 'tpope/vim-rails'
 
 " Snippets
 Plugin 'gmarik/snipmate.vim'
 Plugin 'gmarik/snipmate.snippets'
 
+" Dash.app
 Plugin 'rizzatti/funcoo.vim'
 Plugin 'rizzatti/dash.vim'
 
 
 " Syntax highlight
-Plugin 'cucumber.zip'
 Plugin 'gmarik/vim-markdown'
 Plugin 'timcharper/textile.vim'
 
@@ -285,49 +281,38 @@ nmap <M-k> [e
 vmap <M-j> ]egv
 vmap <M-k> [egv
 
-" (HT|X)ml tool
-Plugin 'ragtag.vim'
-
 " Utility
-Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'AndrewRadev/splitjoin.vim'
 nmap sj :SplitjoinJoin<cr>
 nmap sk :SplitjoinSplit<cr>
 
-Plugin 'kana/vim-textobj-user'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-
 Plugin 'gmarik/github-search.vim'
+
 Plugin 'gmarik/ide-popup.vim'
 Plugin 'gmarik/sudo-gui.vim'
-Plugin 'Gundo'
+
+Plugin 'sjl/gundo.vim'
 
 Plugin 'mkitt/browser-refresh.vim'
 com! ONRRB :au! BufWritePost <buffer> :RRB
 com! NORRB :au! BufWritePost <buffer>
 
 
-Plugin 'repeat.vim'
-Plugin 'surround.vim'
-
 " Plugin 'SuperTab'
 Plugin 'bogado/file-line'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'lastpos.vim'
+Plugin 'vim-scripts/lastpos.vim'
 
 Plugin 'Lokaltog/vim-easymotion'
 let g:EasyMotion_leader_key='<LocalLeader>'
-
-Plugin 'Indent-Guides'
-let g:indent_guides_guide_size = 1
 
 Plugin 'ZoomWin'
 noremap <leader>o :ZoomWin<CR>
 vnoremap <leader>o <C-C>:ZoomWin<CR>
 inoremap <leader>o <C-O>:ZoomWin<CR>
 
-Plugin 'tlib'
-Plugin 'tComment'
+Plugin 'tomtom/tlib_vim'
+Plugin 'tomtom/tcomment_vim'
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
@@ -369,19 +354,6 @@ nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
 
 " " }}}
 
-" Command-T
-" Plugin 'wincent/Command-T.git'
-" let g:CommandTMatchWindowAtTop=1 " show window at top
-" nnoremap <leader>tv :CommandTFlush<cr>\|:CommandT app/views<cr>
-" nnoremap <leader>tc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-" nnoremap <leader>tm :CommandTFlush<cr>\|:CommandT app/models<cr>
-" nnoremap <leader>tl :CommandTFlush<cr>\|:CommandT lib<cr>
-" nnoremap <leader>ta :CommandTFlush<cr>\|:CommandT app/assets<cr>
-" nnoremap <leader>tp :CommandTFlush<cr>\|:CommandT public<cr>
-" nnoremap <leader>tr :topleft :vsplit config/routes.rb<cr>
-" nnoremap <leader>tg :topleft :vsplit Gemfile<cr>
-
-"
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_max_height = 30
@@ -398,17 +370,6 @@ nnoremap <leader>ep :CtrlP public<cr>
 nnoremap <leader>er :topleft :vsplit config/routes.rb<cr>
 nnoremap <leader>eg :topleft :vsplit Gemfile<cr>
 
-" Misc stuff
-Plugin '~/Dropbox/.gitrepos/utilz.vim.git'
-
-" my dev stuff
-" Plugin! '~/.vim/grep.git', {'sync':'no'}
-Plugin '~/.vim/grep.git', {'sync':'no'}
-
-" trying this
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'jimenezrick/vimerl'
-Plugin 'neverland.vim--All-colorschemes-suck'
 
 " Plugin 'int3/vim-extradite'
 " Plugin 'Lokaltog/vim-powerline'
@@ -423,9 +384,6 @@ let g:airline_section_z = airline#section#create(['%(%l,%c%V%) %P'])
 let g:airline_section_warning = '' "airline#section#create(['whitespace'])
 
 Plugin 'gregsexton/gitv'
-Plugin 'thinca/vim-quickrun.git'
-Plugin 'gh:thinca/vim-poslist.git'
-Plugin 'github:mattn/gist-vim.git'
 Plugin 'rstacruz/sparkup.git', {'rtp': 'vim/'}
 let g:sparkupExecuteMapping = '<c-e>'
 let g:sparkupNextMapping = '<c-ee>'
