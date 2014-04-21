@@ -207,9 +207,6 @@ inoremap <C-S> <C-O>:update<CR>
 " generate HTML version current buffer using current color scheme
 map <leader>2h :runtime! syntax/2html.vim<CR>
 
-iab #e # encoding: UTF-8
-iab #v # vim: set ft=sh:
-
 " " }}}
 
 " AutoCommands " {{{
@@ -249,6 +246,8 @@ Plugin 'tpope/vim-rails'
 " Snippets
 Plugin 'gmarik/snipmate.vim'
 Plugin 'gmarik/snipmate.snippets'
+nnoremap <leader>so :Explore ~/.vim/bundle/snipmate.snippets/snippets/<CR>
+
 
 " Dash.app
 Plugin 'rizzatti/funcoo.vim'
