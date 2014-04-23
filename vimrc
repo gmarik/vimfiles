@@ -217,7 +217,8 @@ au BufRead,BufNewFile {*.local}                                       setl ft=sh
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         setl ft=markdown
 au BufRead,BufNewFile {*.scala}                                       setl ft=scala
 au! BufReadPost       {COMMIT_EDITMSG,*/COMMIT_EDITMSG}               setl ft=gitcommit noml list| norm 1G
-au! BufWritePost      *.snippet                                       call ReloadAllSnippets()
+au! BufWritePost      {*.snippet,*.snippets}                          call ReloadAllSnippets()
+
 " open help in vertical split
 au BufWinEnter *.txt if &ft == 'help' | wincmd H | nmap q :q<CR> | endif
 " " }}}
