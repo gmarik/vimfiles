@@ -243,10 +243,21 @@ if has("gui_running")
 endif
 
 " Programming
-" Plugin 'Blackrush/vim-gocode'
+" Python
+Plugin 'davidhalter/jedi-vim'
+Plugin 'klen/python-mode'
+
+" Golang
 Plugin 'fatih/vim-go'
+
+" Scala
 Plugin 'derekwyatt/vim-scala'
+
+" Ruby/Rails
 Plugin 'tpope/vim-rails'
+
+" coffee
+Plugin 'kchmck/vim-coffee-script'
 
 " Snippets
 Plugin 'gmarik/snipmate.vim'
