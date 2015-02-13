@@ -119,7 +119,7 @@ if has('gui_running')
   " Fonts
   " :set guifont=* " to launch a GUI dialog
   if has('mac')
-  set guifont=Andale\ Mono:h13
+  set guifont=Andale\ Mono:h14
   else
   set guifont=Terminus:h16
   end
