@@ -220,7 +220,7 @@ au BufRead,BufNewFile {Gemfile,Rakefile,*.rake,config.ru,*.rabl}      setl ft=ru
 au BufRead,BufNewFile {*.local}                                       setl ft=sh
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         setl ft=markdown
 au BufRead,BufNewFile {*.scala}                                       setl ft=scala
-au! BufReadPost       {COMMIT_EDITMSG,*/COMMIT_EDITMSG}               setl ft=gitcommit noml list| norm 1G
+au! BufReadPost       {COMMIT_EDITMSG,*/COMMIT_EDITMSG}               exec 'setl ft=gitcommit noml list spell' | norm 1G
 au! BufWritePost      {*.snippet,*.snippets}                          call ReloadAllSnippets()
 
 " open help in vertical split
