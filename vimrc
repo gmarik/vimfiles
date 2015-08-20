@@ -78,7 +78,7 @@ set matchtime=2               " Bracket blinking.
 
 set wildmode=longest,list     " At command line, complete longest common string, then list alternatives.
 
-set completeopt+=preview
+set completeopt-=preview      " disable auto opening preview window
 
 set novisualbell              " No blinking
 set noerrorbells              " No noise.
