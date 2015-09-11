@@ -369,7 +369,7 @@ nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
 
 " " }}}
 
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_max_height = 30
 let g:ctrlp_match_window_bottom=1
