@@ -78,7 +78,7 @@ set matchtime=2               " Bracket blinking.
 
 set wildmode=longest,list     " At command line, complete longest common string, then list alternatives.
 
-set completeopt+=preview
+set completeopt-=preview      " disable auto opening preview window
 
 set novisualbell              " No blinking
 set noerrorbells              " No noise.
@@ -119,7 +119,7 @@ if has('gui_running')
   " Fonts
   " :set guifont=* " to launch a GUI dialog
   if has('mac')
-  set guifont=Andale\ Mono:h13
+  set guifont=Andale\ Mono:h14
   else
   set guifont=Terminus:h16
   end
@@ -215,16 +215,16 @@ map <leader>2h :runtime! syntax/2html.vim<CR>
 
 " AutoCommands " {{{
 au BufRead,BufNewFile {*.go}                                          setl ft=go tabstop=2 softtabstop=2 noexpandtab smarttab
-" autocmd FileType go compiler go
-au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     setl ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
+au BufRead,BufNewFile {*.coffee}                                      setl ft=coffee tabstop=2 softtabstop=2 expandtab smarttab
+au BufRead,BufNewFile {Gemfile,Rakefile,*.rake,config.ru,*.rabl}      setl ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 au BufRead,BufNewFile {*.local}                                       setl ft=sh
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         setl ft=markdown
 au BufRead,BufNewFile {*.scala}                                       setl ft=scala
-au! BufReadPost       {COMMIT_EDITMSG,*/COMMIT_EDITMSG}               setl ft=gitcommit noml list| norm 1G
+au! BufReadPost       {COMMIT_EDITMSG,*/COMMIT_EDITMSG}               exec 'setl ft=gitcommit noml list spell' | norm 1G
 au! BufWritePost      {*.snippet,*.snippets}                          call ReloadAllSnippets()
 
 " open help in vertical split
-au BufWinEnter *.txt if &ft == 'help' | wincmd H | nmap q :q<CR> | endif
+" au BufWinEnter {*.txt} if 'help' == &ft | wincmd H | nmap q :q<CR> | endif
 " " }}}
 
 " Scripts and Plugins " {{{
@@ -243,10 +243,21 @@ if has("gui_running")
 endif
 
 " Programming
-" Plugin 'Blackrush/vim-gocode'
+" Python
+Plugin 'davidhalter/jedi-vim'
+Plugin 'klen/python-mode'
+
+" Golang
 Plugin 'fatih/vim-go'
+
+" Scala
 Plugin 'derekwyatt/vim-scala'
+
+" Ruby/Rails
 Plugin 'tpope/vim-rails'
+
+" coffee
+Plugin 'kchmck/vim-coffee-script'
 
 " Snippets
 Plugin 'gmarik/snipmate.vim'
@@ -358,7 +369,7 @@ nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
 
 " " }}}
 
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_max_height = 30
 let g:ctrlp_match_window_bottom=1
