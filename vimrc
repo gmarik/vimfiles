@@ -182,6 +182,10 @@ nnoremap <leader>v :exec ':vnew \| CommandT'<CR>
 " and without
 nnoremap <leader>V :vnew<CR>
 
+" when pasting copy pasted text back to 
+" buffer instead replacing with owerride
+xnoremap p pgvy
+
 if has('mac')
 
   if has('gui_running')
