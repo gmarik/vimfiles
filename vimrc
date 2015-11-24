@@ -167,6 +167,9 @@ map <S-CR> A<CR><ESC>
 map <leader>E :Explore<CR>
 map <leader>EE :Vexplore!<CR><C-W>=
 
+" toggle search highlighting
+nnoremap <silent> <space> :let &hls=1-&hls<cr>
+
 " Make Control-direction switch between windows (like C-W h, etc)
 nmap <silent> <C-k> <C-W><C-k>
 nmap <silent> <C-j> <C-W><C-j>
