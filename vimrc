@@ -399,22 +399,6 @@ nnoremap <leader>ep :CtrlP public<cr>
 nnoremap <leader>er :topleft :vsplit config/routes.rb<cr>
 nnoremap <leader>eg :topleft :vsplit Gemfile<cr>
 
-
-" Plugin 'int3/vim-extradite'
-" Plugin 'Lokaltog/vim-powerline'
-Plugin 'bling/vim-airline'
-if exists("airline#section#create")
-let g:airline_section_a = airline#section#create(['%<', 'file', 'readonly'])
-let g:airline_section_b = '' " airline#section#create_left(['mode', 'paste', 'iminsert'])
-let g:airline_section_c = '' " airline#section#create(['hunks'])
-let g:airline_section_gutter = airline#section#create(['%=%y%m%r[%{&ff}]'])
-let g:airline_section_x = '' " airline#section#create_right(['filetype'])
-" let g:airline_section_y = '%y%m%r%=[%{&ff}]' "airline#section#create_right(['ffenc'])
-let g:airline_section_z = airline#section#create(['%(%l,%c%V%) %P'])
-let g:airline_section_warning = '' "airline#section#create(['whitespace'])
-endif
-
-Plugin 'gregsexton/gitv'
 Plugin 'rstacruz/sparkup.git', {'rtp': 'vim/'}
 let g:sparkupExecuteMapping = '<c-e>'
 let g:sparkupNextMapping = '<c-ee>'
