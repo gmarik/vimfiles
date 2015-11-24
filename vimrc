@@ -180,8 +180,8 @@ nmap <silent> <C-l> <C-W><C-l>
 nmap <C-K> {
 nmap <C-J> }
 
-" vertical split with CommandT
-nnoremap <leader>v :exec ':vnew \| CommandT'<CR>
+" vertical split with fuzzy-searcher
+nnoremap <leader>v :exec ':vnew \| CtrlP'<CR>
 " and without
 nnoremap <leader>V :vnew<CR>
 
