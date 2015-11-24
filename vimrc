@@ -252,6 +252,17 @@ Plugin 'klen/python-mode'
 
 " Golang
 Plugin 'fatih/vim-go'
+" unlike gofmt also adds/removes imports
+let g:go_fmt_command = 'goimports'
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_build_constraints = 1
+
+" goes to the definition under cursor in a new split
+" TODO: doesn't work
+nnoremap <C-W>gd <C-W>^zz
+
 
 " Scala
 Plugin 'derekwyatt/vim-scala'
