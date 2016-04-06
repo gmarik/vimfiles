@@ -270,18 +270,15 @@ Plugin 'derekwyatt/vim-scala'
 " Ruby/Rails
 Plugin 'tpope/vim-rails'
 
-" coffee
-Plugin 'kchmck/vim-coffee-script'
+" Js
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " Snippets
 Plugin 'gmarik/snipmate.vim'
 Plugin 'gmarik/snipmate.snippets'
 nnoremap <leader>so :Explore ~/.vim/bundle/snipmate.snippets/snippets/<CR>
 
-
-" Dash.app
-Plugin 'rizzatti/funcoo.vim'
-Plugin 'rizzatti/dash.vim'
 
 
 " Syntax highlight
