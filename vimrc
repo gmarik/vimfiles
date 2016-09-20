@@ -246,11 +246,12 @@ endif
 " Python
 Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
+let g:pymode_lint = 0
 
 " Golang
 Plugin 'fatih/vim-go'
 " unlike gofmt also adds/removes imports
-let g:go_fmt_command = 'goimports'
+let g:go_fmt_command = 'gofmt'
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
