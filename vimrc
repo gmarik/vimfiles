@@ -288,6 +288,7 @@ Plugin 'timcharper/textile.vim'
 " Git integration
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
+Plugin 'junegunn/gv.vim'
 
 nnoremap <leader>W :Gwrite<CR>
 nnoremap <leader>C :Gcommit -v<CR>
