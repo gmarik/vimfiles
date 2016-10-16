@@ -259,6 +259,11 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_build_constraints = 1
 
+
+nnoremap <leader>gt :GoTest<CR>
+nnoremap <leader>gv :GoVet<CR>
+nnoremap <leader>gl :GoLint<CR>
+
 " goes to the definition under cursor in a new split
 " TODO: doesn't work
 nnoremap <C-W>gd <C-W>^zz
