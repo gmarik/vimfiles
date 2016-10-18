@@ -359,48 +359,27 @@ nnoremap <leader>## :<C-u>HlmPartGrepCword<CR>
 vnoremap ## :<C-u>HlmPartVSel<CR>
 vnoremap <leader>## :<C-u>HlmPartGrepVSel<CR>
 
-" FuzzyFinder
-Plugin 'L9'
-Plugin 'FuzzyFinder'
-" FuF customisations "{{{
-let g:fuf_modesDisable = []
-nnoremap <leader>h :FufHelp<CR>
-nnoremap <leader>1  :FufTagWithCursorWord<CR>
-nnoremap <leader>11 :FufTag<CR>
-nnoremap <leader>2  :FufFileWithCurrentBufferDir<CR>
-nnoremap <leader>22 :FufFile<CR>
-nnoremap <leader>3  :FufBuffer<CR>
-nnoremap <leader>4  :FufDirWithCurrentBufferDir<CR>
-nnoremap <leader>44 :FufDir<CR>
-nnoremap <leader>5  :FufBufferTag<CR>
-nnoremap <leader>55 :FufBufferTagAll<CR>
-nnoremap <leader>6  :FufMruFile<CR>
-nnoremap <leader>7  :FufLine<CR>
-nnoremap <leader>8  :FufChangeList<CR>
-nnoremap <leader>9  :FufTaggedFile<CR>
-
-nnoremap <leader>p :FufDir ~/src/<CR>
-nnoremap <leader>ge :FufDir ~/.rvm/gems/<CR>
-
-nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
-
-" " }}}
-
 Plugin 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<leader>t'
-let g:ctrlp_max_height = 30
-let g:ctrlp_match_window_bottom=1
-let g:ctrlp_max_height = 20
-let g:ctrlp_match_window_reversed = 1
-let g:ctrlp_switch_buffer = 'e'
-nnoremap <leader>ev :CtrlP app/views<cr>
-nnoremap <leader>ec :CtrlP app/controllers<cr>
-nnoremap <leader>em :CtrlP app/models<cr>
-nnoremap <leader>el :CtrlP lib<cr>
-nnoremap <leader>ea :CtrlP app/assets<cr>
-nnoremap <leader>ep :CtrlP public<cr>
-nnoremap <leader>er :topleft :vsplit config/routes.rb<cr>
-nnoremap <leader>eg :topleft :vsplit Gemfile<cr>
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
+let g:ctrlp_extensions = ['tag', 'buffertag', 'dir', 'rtscript',
+                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+
+nnoremap <leader>0  :CtrlPClearAllCaches<CR>
+nnoremap <leader>`  :CtrlPUndo<CR>
+nnoremap <leader>1  :CtrlPTag expand("<cword>")<CR>
+nnoremap <leader>11 :CtrlPTag<CR>
+nnoremap <leader>2  :CtrlP expand("%:h:p")<CR>
+nnoremap <leader>22 :CtrlP<CR>
+nnoremap <leader>3  :CtrlPBuffer<CR>
+nnoremap <leader>4  :CtrlPDir expand("%:h:p")<CR>
+nnoremap <leader>44 :CtrlPDir<CR>
+nnoremap <leader>6  :CtrlPMRU<CR>
+nnoremap <leader>7  :CtrlPLine<CR>
+nnoremap <leader>8  :CtrlPChange<CR>
+nnoremap <leader>9  :CtrlPChange<CR>
+nnoremap <leader>h  :CtrlPRTS<CR>
+
 
 Plugin 'rstacruz/sparkup.git', {'rtp': 'vim/'}
 let g:sparkupExecuteMapping = '<c-e>'
